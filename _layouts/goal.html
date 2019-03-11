@@ -19,11 +19,11 @@ layout: frontpage
 
         {% for indicator_sort in sdg_indicators %}
 
-              {% assign indicator = site.indicator %}
+              {% assign ident = indicator_sort.indicator_id | replace: ".","-" %}
 
               <tr>
-                  <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}{{ lang }}{{ indicator.permalink }}">{{indicator_sort.indicator_id}}</a></td>
-                  <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}{{ lang }}{{ indicator.permalink }}">{{indicator_sort.indicator}}</a></td>
+                  <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}/indicator/{{ident}}">{{indicator_sort.indicator_id}}</a></td>
+                  <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}/indicator/{{ident}}">{{indicator_sort.indicator}}</a></td>
                   <td style="text-align: left; padding: 10px;"><a>{{indicator.zrodlo_danych}}</a></td>
                 </tr>
 
