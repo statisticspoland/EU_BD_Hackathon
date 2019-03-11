@@ -19,7 +19,7 @@ layout: frontpage
 
         {% for indicator_sort in sdg_indicators %}
 
-              {% assign indicator = site.indicators | where:"indicator", indicator_sort.indicator_id %}
+              {% assign indicator = site.indicator | where:"indicator", indicator_sort.indicator_id %}
               {% assign indicator = indicator | where:"lang", site.defaults[0].values.lang | first %}
 
               <tr>
