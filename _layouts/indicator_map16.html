@@ -178,7 +178,7 @@ layout: frontpage
            if (selectedPolygon) {
              selectedPolygon.isActive = false;
            }
-           document.getElementById("image1").src=stateData[id][0].source;
+           document.getElementById("image1").src="{{site.baseurl}}"+stateData[id][0].source;
            selectedStateName = stateName;
            selectedStateId = id;
            selectedPolygon = polygon;

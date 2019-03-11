@@ -1,126 +1,126 @@
 {
   "AT": [
       {
-        "source": "{{site.baseurl}}/assets/img/mp/Austria.png"
+        "source": "/assets/img/mp/Austria.png"
       }
   ],
   "BE": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/Belgium.png"
+      "source": "/assets/img/mp/Belgium.png"
     }
 
   ],
   "PL": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/Poland.png"
+      "source": "/assets/img/mp/Poland.png"
     }
 
   ],
   "BA": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/Bosnia_and_Herzegovina.png"
+      "source": "/assets/img/mp/Bosnia_and_Herzegovina.png"
     }
 
   ],
   "BG": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/Bulgaria.png"
+      "source": "/assets/img/mp/Bulgaria.png"
     }
 
   ],
   "HR": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/Croatia.png"
+      "source": "/assets/img/mp/Croatia.png"
     }
 
   ],
   "CZ": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/Czech_Republic.png"
+      "source": "/assets/img/mp/Czech_Republic.png"
     }
 
   ],
   "FI": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/Finland.png"
+      "source": "/assets/img/mp/Finland.png"
     }
 
   ],
   "FR": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/France.png"
+      "source": "/assets/img/mp/France.png"
     }
 
   ],
   "DE": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/Germany.png"
+      "source": "/assets/img/mp/Germany.png"
     }
 
   ],
   "GR": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/Greece.png"
+      "source": "/assets/img/mp/Greece.png"
     }
 
   ],
   "IE": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/Ireland.png"
+      "source": "/assets/img/mp/Ireland.png"
     }
 
   ],
   "IT": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/Italy.png"
+      "source": "/assets/img/mp/Italy.png"
     }
 
   ],
   "LU": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/Luxembourg.png"
+      "source": "/assets/img/mp/Luxembourg.png"
     }
 
   ],
   "NL": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/Netherlands.png"
+      "source": "/assets/img/mp/Netherlands.png"
     }
 
   ],
   "RS": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/Republic_of_Serbia.png"
+      "source": "/assets/img/mp/Republic_of_Serbia.png"
     }
 
   ],
   "RO": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/Romania.png"
+      "source": "/assets/img/mp/Romania.png"
     }
 
   ],
   "SK": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/Slovakia.png"
+      "source": "/assets/img/mp/Slovakia.png"
     }
 
   ],
   "SE": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/Sweden.png"
+      "source": "/assets/img/mp/Sweden.png"
     }
 
   ],
   "CH": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/Switzerland.png"
+      "source": "/assets/img/mp/Switzerland.png"
     }
 
   ],
   "GB": [
     {
-      "source": "{{site.baseurl}}/assets/img/mp/United_Kingdom.png"
+      "source": "/assets/img/mp/United_Kingdom.png"
     }
 
   ]
