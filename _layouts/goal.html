@@ -19,8 +19,8 @@ layout: frontpage
 
         {% for indicator_sort in sdg_indicators %}
 
-              {% assign indicator = site.indicator | where:"indicator", indicator_sort.indicator_id %}
-              
+              {% assign indicator = site.indicator %}
+
               <tr>
                   <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}{{ lang }}{{ indicator.permalink }}">{{indicator.indicator}}</a></td>
                   <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}{{ lang }}{{ indicator.permalink }}">{{indicator.title}}</a></td>
