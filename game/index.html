@@ -10,7 +10,7 @@ layout: default
     <div class="game-board" style="display: none;">
     </div>
 
-    <button class="button game-start" id="start">Start game</button>
+    <button class="button game-start" id="start">Start game !</button>
 </div>
 
 <script>
@@ -45,7 +45,7 @@ const memoryGame = {
             //lub jeżeli index tego elementu nie istnieje w pobranych...
             if (!this.tilesChecked[0] || (this.tilesChecked[0].dataset.index !== e.target.dataset.index)) {
                 this.tilesChecked.push(e.target);
-                e.target.style.backgroundImage = 'url(' + this.tilesImg[e.target.dataset.cardType] + ')';
+                e.target.style.backgroundImage = 'url({{site.baseurl}}' + this.tilesImg[e.target.dataset.cardType] + ')';
             }
 
             if (this.tilesChecked.length === 2) {
