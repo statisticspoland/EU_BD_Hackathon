@@ -16,7 +16,7 @@
 title: Hackathon EU BD - Statistics Poland
 email: your-email@example.com
 description: Statistics Poland
-baseurl: "https://statisticspoland.github.io/EU_BD_Hackathon/" # the subpath of your site, e.g. /blog
+baseurl: "https://statisticspoland.github.io/EU_BD_Hackathon" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
