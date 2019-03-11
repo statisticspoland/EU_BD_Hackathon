@@ -22,8 +22,8 @@ layout: frontpage
               {% assign indicator = site.indicator %}
 
               <tr>
-                  <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}{{ lang }}{{ indicator.permalink }}">{{indicator.indicator}}</a></td>
-                  <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}{{ lang }}{{ indicator.permalink }}">{{indicator.title}}</a></td>
+                  <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}{{ lang }}{{ indicator.permalink }}">{{indicator_sort.indicator_id}}</a></td>
+                  <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}{{ lang }}{{ indicator.permalink }}">{{indicator_sort.indicator}}</a></td>
                   <td style="text-align: left; padding: 10px;"><a>{{indicator.zrodlo_danych}}</a></td>
                 </tr>
 
