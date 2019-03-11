@@ -1,33 +1,33 @@
 target_id,goal,indicator_id,indicator,zrodlo
-1.1.1,1,1.1.1,"Average number of working and private hours of teachers per week (aspect of work life balance)",SDG
-1.1.2,1,1.1.2,"Average number of working hours for activity of teachers per week by age"
-1.1.2.1,1,1.1.2.1,"Average number of working hours for activity of teachers per week by sex"
-1.1.3,1,1.1.3,"Average number of private hours for personal and free time of teachers per week by age"
-1.1.3.1,1,1.1.3.1,"Average number of private hours for personal and free time of teachers per week by sex (primary and secondary schools in Flanders in 2018)"
-1.1.4,1,1.1.4,"Total number of registrations started of teachers per day of the week by places"
-2.1.1,2,2.1.1,"Physical activity during the day"
-2.1.2,2,2.1.2,"Points of Interest - where do we spend time"
-2.1.3,2,2.1.3,"Transportation mode of trips"
-3.1.1,3,3.1.1,"Self-perceived general health by sex"
-3.1.2,3,3.1.2,"Self-perceived general health when feeling rush"
-3.1.3,3,3.1.3,"Feeling rushed by main activity status"
-3.1.4,3,3.1.4,"Main activity during the day by activity status"
-3.1.5,3,3.1.5,"Usage of computer or internet in main activity during the day"
-4.1.1,4,4.1.1,"At -risk of poverty rate according to international poverty line"
-4.1.2,4,4.1.2,"At-risk of poverty rate after social transfers"
-4.1.3,4,4.1.3,"Deaths by diseases of the circulatory system, diabetes mellitus, malignant neoplasms and chronic respiratory disease per 100 thous. population"
-4.1.4,4,4.1.4,"Death rate due to road traffic injuries per 100 thous. population"
-4.1.5,4,4.1.5,"Percentage of children under 5 years of age with health subjectively evaluated as very good or good"
-4.1.6,4,4.1.6,"Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill"
-4.1.7,4,4.1.7,"Percentage of persons with basic or above basic digital skills"
-4.1.8,4,4.1.8,"Proportion of individuals who own a mobile telephone"
-4.1.9,4,4.1.9,"Passenger and freight volumes, by mode of transport"
-4.2.1,4,4.2.1,"Fixed Internet broadband subscriptions per 100 inhabitants"
-4.2.2,4,4.2.2,"Proportion of individuals aged 16-74 using the Internet in the last 3 months"
-5.1.1,5,5.1.1,"Body mass index (BMI) by nationality and sex in 2014"
-5.1.2,5,5.1.2,"Body mass index (BMI) by nationality"
-5.1.3,5,5.1.3,"Overweight or obese population"
-5.1.4,5,5.1.4,"Fruits and vegetables consumption in population aged 15 years old and over"
-5.1.5,5,5.1.5,"Fat and protein supply per day"
-5.1.6,5,5.1.6,"Mobile data position by country"
-5.1.7,5,5.1.7,"Transboundary movements (mobile data position)"
+1.1.1,1,1.1.1,"Average number of working and private hours of teachers per week (aspect of work life balance)",Modular Online Time Use Survey (MOTUS)
+1.1.2,1,1.1.2,"Average number of working hours for activity of teachers per week by age",Modular Online Time Use Survey (MOTUS)
+1.1.2.1,1,1.1.2.1,"Average number of working hours for activity of teachers per week by sex",Modular Online Time Use Survey (MOTUS)
+1.1.3,1,1.1.3,"Average number of private hours for personal and free time of teachers per week by age",Modular Online Time Use Survey (MOTUS)
+1.1.3.1,1,1.1.3.1,"Average number of private hours for personal and free time of teachers per week by sex (primary and secondary schools in Flanders in 2018)",Modular Online Time Use Survey (MOTUS)
+1.1.4,1,1.1.4,"Total number of registrations started of teachers per day of the week by places",Modular Online Time Use Survey (MOTUS)
+2.1.1,2,2.1.1,"Physical activity during the day",BigO (mobile sensor data)
+2.1.2,2,2.1.2,"Points of Interest - where do we spend time",BigO (mobile sensor data)
+2.1.3,2,2.1.3,"Transportation mode of trips",BigO (mobile sensor data)
+3.1.1,3,3.1.1,"Self-perceived general health by sex",Harmonised European Time Use Survey
+3.1.2,3,3.1.2,"Self-perceived general health when feeling rush",Harmonised European Time Use Survey
+3.1.3,3,3.1.3,"Feeling rushed by main activity status",Harmonised European Time Use Survey
+3.1.4,3,3.1.4,"Main activity during the day by activity status",Harmonised European Time Use Survey
+3.1.5,3,3.1.5,"Usage of computer or internet in main activity during the day",Harmonised European Time Use Survey
+4.1.1,4,4.1.1,"At -risk of poverty rate according to international poverty line",SDG
+4.1.2,4,4.1.2,"At-risk of poverty rate after social transfers",SDG
+4.1.3,4,4.1.3,"Deaths by diseases of the circulatory system, diabetes mellitus, malignant neoplasms and chronic respiratory disease per 100 thous. population",SDG
+4.1.4,4,4.1.4,"Death rate due to road traffic injuries per 100 thous. population",SDG
+4.1.5,4,4.1.5,"Percentage of children under 5 years of age with health subjectively evaluated as very good or good",SDG
+4.1.6,4,4.1.6,"Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill",SDG
+4.1.7,4,4.1.7,"Percentage of persons with basic or above basic digital skills",SDG
+4.1.8,4,4.1.8,"Proportion of individuals who own a mobile telephone",SDG
+4.1.9,4,4.1.9,"Passenger and freight volumes, by mode of transport",SDG
+4.2.1,4,4.2.1,"Fixed Internet broadband subscriptions per 100 inhabitants",SDG
+4.2.2,4,4.2.2,"Proportion of individuals aged 16-74 using the Internet in the last 3 months",SDG
+5.1.1,5,5.1.1,"Body mass index (BMI) by nationality and sex in 2014",BigO (mobile sensor data)
+5.1.2,5,5.1.2,"Body mass index (BMI) by nationality",BigO (mobile sensor data)
+5.1.3,5,5.1.3,"Overweight or obese population",BigO (mobile sensor data)
+5.1.4,5,5.1.4,"Fruits and vegetables consumption in population aged 15 years old and over",BigO (mobile sensor data)
+5.1.5,5,5.1.5,"Fat and protein supply per day",BigO (mobile sensor data)
+5.1.6,5,5.1.6,"Mobile data position by country",BigO (mobile sensor data)
+5.1.7,5,5.1.7,"Transboundary movements (mobile data position)",BigO (mobile sensor data)
