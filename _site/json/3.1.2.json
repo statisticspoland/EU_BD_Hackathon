@@ -1,0 +1,57 @@
+{
+  "FR":[
+    {
+      "yr": "Good",
+      "always_rushed": 4462,
+      "sometimes": 6983,
+      "never": 7068
+    }, {
+      "yr": "Fair",
+      "always_rushed": 1420,
+      "sometimes": 1874,
+      "never": 3302
+    }, {
+      "yr": "Bad",
+      "always_rushed": 375,
+      "sometimes": 381,
+      "never": 1343
+    }
+    ],
+  "HU":[
+    {
+      "yr": "Good",
+      "always_rushed": 867,
+      "sometimes": 2511,
+      "never": 519
+    }, {
+      "yr": "Fair",
+      "always_rushed": 1331,
+      "sometimes": 1314,
+      "never": 131
+    }, {
+      "yr": "Bad",
+      "always_rushed": 1078,
+      "sometimes": 172,
+      "never": 14
+    }
+  ],
+"NO":[
+  {
+    "yr": "Good",
+    "always_rushed": 945,
+    "sometimes": 1732,
+    "never": 1770
+  }, {
+    "yr": "Fair",
+    "always_rushed": 317,
+    "sometimes": 537,
+    "never": 781
+  }, {
+    "yr": "Bad",
+    "always_rushed": 146,
+    "sometimes": 277,
+    "never": 627
+  }
+]
+
+}

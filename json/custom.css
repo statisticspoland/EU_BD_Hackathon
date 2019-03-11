@@ -1,0 +1,242 @@
+input[type="checkbox"], input[type="radio"] {
+    margin-left: -2rem;
+    opacity: 0;
+    position: absolute;
+    display: none;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+button, [type="button"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #0071bc;
+    border: 0;
+    border-radius: 0.3rem;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-right: 5px;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1rem;
+}
+
+.ct-chart .ct-label {
+    font-size: 1rem;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+}
+
+h5{
+  font-size: 1rem;
+}
+#sex{
+  margin: 15px;
+    width: 35px;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+ul li {
+    display: table-row;
+}
+
+ul li, ol li {
+    line-height: 1.5;
+    margin-bottom: 0.75em;
+    margin-top: 0.75em;
+}
+li {
+    margin-bottom: 0.5em;
+}
+
+#check-list-box {
+    margin-bottom: 0em;
+    margin-top: 0em;
+    display: table;
+    line-height: 0;
+    list-style: none;
+    width: 100%;
+}
+
+#filtr {
+    line-height: 3;
+    margin-top: 0em;
+    padding-bottom: 0%;
+    font-size: 16px;
+    background-color: transparent;
+    text-align: left;
+}
+
+table {
+    border-spacing: 0;
+    margin: 2em 0;
+    width: 100%;
+}
+
+table thead th {
+    background-color: #ededed;
+    text-align: center;
+}
+
+table td, table th {
+    background-color: #ffffff;
+    border: 1px solid #cecece;
+}
+
+table th {
+    text-align: left;
+    background-color: #f1f1f1;
+}
+
+body{
+  max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+}
+
+#main{
+  margin-top: 60px;
+}
+
+#chartdiv, #chartdiv2{
+  width: 50%;
+  height: 500px;
+  float: left;
+  margin-bottom: 25px;
+}
+
+#chartdiv11{
+  width: 100%;
+  height: 500px;
+  margin-bottom: 25px;
+}
+
+
+#filtry{
+  color: #fff;
+  pointer-events: none;
+}
+
+h2{
+  margin-top: 1.0em;
+  margin-bottom: 1.5rem;
+}
+
+
+.dropdown-header{
+  padding: .5rem 1rem;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+#list{
+  margin-top: 2rem;
+  padding: 0;
+}
+
+
+@media only screen and (max-width: 1050px) {
+  #przycisk{
+    display: none;
+  }
+  .dropdown-header {
+      display: none;
+  }
+  .form-inline .form-control{
+    display: none;
+  }
+  #chartdiv,#chartdiv2{
+    width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 715px){
+  .divovefiltry {
+      display: none;
+  }
+  #wybrane{
+    display: none;
+  }
+  .ct-chart {
+    margin-top: 20px;
+  }
+}
+
+.yr.nav.nav-tabs{
+  border-bottom: none;
+  padding-top: 2px;
+  border-right: 1px solid #ddd;
+}
+
+.yr.nav.nav-tabs>.nav-link{
+  float: none;
+  margin-bottom: 2px;
+margin-right: -1px;
+}
+
+.yr .nav-link.active,
+.yr .nav-link:hover,
+.yr .nav-link:focus
+{
+  border-bottom-color: #ddd;
+  border-right-color: transparent;
+}
+
+.yr .nav-link{
+  border-radius: 4px 0 0 4px;
+  margin-right: -1px;
+  display:block;
+}
+
+/*----------------do gry------------------*/
+.game-board {
+    margin:30px auto;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+    width: 550px;
+    height: 444px;
+    border: 1px solid #ddd;
+}
+
+.game-tile {
+    position: absolute;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    background: #a9c4ff url(images/title.png) center center no-repeat;
+}
+
+.game-tile:hover {
+    background-color:#0071bc;
+}
+
+.game-score {
+    text-align: center;
+}
+
+#start {
+    padding: 0.8em 3em;
+    background: #0071bc;
+    color: #FFF;
+    border: 0;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: 0.5s background-color, 0.5s box-shadow;
+    cursor: pointer;
+    display: block;
+    font-size: 20px;
+    margin:30px auto;
+}

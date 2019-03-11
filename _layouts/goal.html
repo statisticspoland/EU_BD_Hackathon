@@ -1,0 +1,36 @@
+---
+layout: frontpage
+---
+
+  <div>
+
+    {% assign sdg_indicators = site.data.globalne.sdg_indicator_metadata %}
+
+    <div id="goal" style="overflow-x: auto;">
+    <table class="table table-striped">
+      <thead>
+        <tr style="padding: 1.5rem; text-align: left; height: 45px;">
+            <th scope="col">ID</th>
+            <th scope="col">Indicator title</th>
+            <th scope="col">Data Source</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        {% for indicator_sort in sdg_indicators %}
+
+              {% assign indicator = site.indicators | where:"indicator", indicator_sort.indicator_id %}
+              {% assign indicator = indicator | where:"lang", site.defaults[0].values.lang | first %}
+
+              <tr>
+                  <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}{{ lang }}{{ indicator.permalink }}">{{indicator.indicator}}</a></td>
+                  <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}{{ lang }}{{ indicator.permalink }}">{{indicator.title}}</a></td>
+                  <td style="text-align: left; padding: 10px;"><a>{{indicator.zrodlo_danych}}</a></td>
+                </tr>
+
+        {% endfor %}
+
+      </tbody>
+    </table>
+    </div>
+  </div>

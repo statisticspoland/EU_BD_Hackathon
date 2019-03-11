@@ -1,0 +1,968 @@
+{
+  "AT": [
+      {
+        "yr": "2010",
+        "fruits": ".",
+        "vegetables": "."
+      },
+      {
+        "yr": "2011",
+        "fruits": ".",
+        "vegetables": "."
+      },
+      {
+        "yr": "2012",
+        "fruits": ".",
+        "vegetables": "."
+      },
+      {
+        "yr": "2013",
+        "fruits": ".",
+        "vegetables": "."
+      },
+      {
+        "yr": "2014",
+        "fruits": 56.2,
+        "vegetables": 47.5
+      },
+      {
+        "yr": "2015",
+        "fruits": ".",
+        "vegetables": "."
+      },
+      {
+        "yr": "2016",
+        "fruits": ".",
+        "vegetables": "."
+      },
+      {
+        "yr": "2017",
+        "fruits": ".",
+        "vegetables": "."
+      }
+  ],
+  "BE": [
+      {
+        "yr": "2010",
+        "fruits": ".",
+        "vegetables": "."
+      },
+      {
+        "yr": "2011",
+        "fruits": ".",
+        "vegetables": "."
+      },
+      {
+        "yr": "2012",
+        "fruits": ".",
+        "vegetables": "."
+      },
+      {
+        "yr": "2013",
+        "fruits": 53.9,
+        "vegetables": 78.2
+      },
+      {
+        "yr": "2014",
+        "fruits": ".",
+        "vegetables": "."
+      },
+      {
+        "yr": "2015",
+        "fruits": ".",
+        "vegetables": "."
+      },
+      {
+        "yr": "2016",
+        "fruits": ".",
+        "vegetables": "."
+      },
+      {
+        "yr": "2017",
+        "fruits": ".",
+        "vegetables": "."
+      }
+  ],
+  "CZ":[
+    {
+      "yr": "2010",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2011",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2012",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2013",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2014",
+      "fruits": 46.8,
+      "vegetables": 41.4
+    },
+    {
+      "yr": "2015",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2016",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],
+  "DK":[
+    {
+      "yr": "2010",
+      "fruits": 66.4,
+      "vegetables": 47.1
+    },
+    {
+      "yr": "2011",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2012",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2013",
+      "fruits": 61.7,
+      "vegetables": 45.8
+    },
+    {
+      "yr": "2014",
+      "fruits": 53,
+      "vegetables": 44.1
+    },
+    {
+      "yr": "2015",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2016",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],
+  "EE":[
+    {
+      "yr": "2010",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2011",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2012",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2013",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2014",
+      "fruits": 52.2,
+      "vegetables": 54.8
+    },
+    {
+      "yr": "2015",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2016",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],"FI":[
+    {
+      "yr": "2010",
+      "fruits": 31.5,
+      "vegetables": 42
+    },
+    {
+      "yr": "2011",
+      "fruits": 31.5,
+      "vegetables": 43.3
+    },
+    {
+      "yr": "2012",
+      "fruits": 30.3,
+      "vegetables": 42.3
+    },
+    {
+      "yr": "2013",
+      "fruits": 30.6,
+      "vegetables": 43.5
+    },
+    {
+      "yr": "2014",
+      "fruits": 31.7,
+      "vegetables": 44.1
+    },
+    {
+      "yr": "2015",
+      "fruits": 32.3,
+      "vegetables": 39.7
+    },
+    {
+      "yr": "2016",
+      "fruits": 31,
+      "vegetables": 43
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],
+  "FR":[
+    {
+      "yr": "2010",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2011",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2012",
+      "fruits": 49.7,
+      "vegetables": 54.2
+    },
+    {
+      "yr": "2013",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2014",
+      "fruits": 55.1,
+      "vegetables": 57.6
+    },
+    {
+      "yr": "2015",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2016",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],
+  "DE":[
+    {
+      "yr": "2010",
+      "fruits": 60.8,
+      "vegetables": 40.5
+    },
+    {
+      "yr": "2011",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2012",
+      "fruits": 59.1,
+      "vegetables": 44.4
+    },
+    {
+      "yr": "2013",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2014",
+      "fruits": 47.3,
+      "vegetables": 34.1
+    },
+    {
+      "yr": "2015",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2016",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],
+  "GR":[
+    {
+      "yr": "2010",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2011",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2012",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2013",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2014",
+      "fruits": 55,
+      "vegetables": 62.2
+    },
+    {
+      "yr": "2015",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2016",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],
+  "HU":[
+    {
+      "yr": "2010",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2011",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2012",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2013",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2014",
+      "fruits": 59.1,
+      "vegetables": 46.3
+    },
+    {
+      "yr": "2015",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2016",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],
+  "IE":[
+    {
+      "yr": "2010",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2011",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2012",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2013",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2014",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2015",
+      "fruits": 54,
+      "vegetables": 68
+    },
+    {
+      "yr": "2016",
+      "fruits": 55,
+      "vegetables": 67
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],
+  "IT":[
+    {
+      "yr": "2010",
+      "fruits": 77.1,
+      "vegetables": 59.1
+    },
+    {
+      "yr": "2011",
+      "fruits": 77.1,
+      "vegetables": 60
+    },
+    {
+      "yr": "2012",
+      "fruits": 75.9,
+      "vegetables": 60.2
+    },
+    {
+      "yr": "2013",
+      "fruits": 75.1,
+      "vegetables": 59.3
+    },
+    {
+      "yr": "2014",
+      "fruits": 74.3,
+      "vegetables": 60.7
+    },
+    {
+      "yr": "2015",
+      "fruits": 76.2,
+      "vegetables": 61.3
+    },
+    {
+      "yr": "2016",
+      "fruits": 75.3,
+      "vegetables": 61.5
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],
+  "LV":[
+    {
+      "yr": "2010",
+      "fruits": 21.5,
+      "vegetables": 35.3
+    },
+    {
+      "yr": "2011",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2012",
+      "fruits": 18.7,
+      "vegetables": 26.7
+    },
+    {
+      "yr": "2013",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2014",
+      "fruits": 20.2,
+      "vegetables": 36.6
+    },
+    {
+      "yr": "2015",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2016",
+      "fruits": 29.7,
+      "vegetables": 43.3
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],
+  "LU":[
+    {
+      "yr": "2010",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2011",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2012",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2013",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2014",
+      "fruits": 49.8,
+      "vegetables": 52.2
+    },
+    {
+      "yr": "2015",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2016",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],
+  "NL":[
+    {
+      "yr": "2010",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2011",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2012",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2013",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2014",
+      "fruits": 41,
+      "vegetables": 31.3
+    },
+    {
+      "yr": "2015",
+      "fruits": 42.8,
+      "vegetables": 29.4
+    },
+    {
+      "yr": "2016",
+      "fruits": 43.1,
+      "vegetables": 30.8
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],
+  "PL":[
+    {
+      "yr": "2010",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2011",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2012",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2013",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2014",
+      "fruits": 58.5,
+      "vegetables": 55.7
+    },
+    {
+      "yr": "2015",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2016",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],
+  "PT":[
+    {
+      "yr": "2010",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2011",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2012",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2013",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2014",
+      "fruits": 70.9,
+      "vegetables": 55.2
+    },
+    {
+      "yr": "2015",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2016",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],
+  "SK":[
+    {
+      "yr": "2010",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2011",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2012",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2013",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2014",
+      "fruits": 47.4,
+      "vegetables": 44
+    },
+    {
+      "yr": "2015",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2016",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],
+  "SI":[
+    {
+      "yr": "2010",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2011",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2012",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2013",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2014",
+      "fruits": 60.7,
+      "vegetables": 60.9
+    },
+    {
+      "yr": "2015",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2016",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],
+  "ES":[
+    {
+      "yr": "2010",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2011",
+      "fruits": 61.2,
+      "vegetables": 47.1
+    },
+    {
+      "yr": "2012",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2013",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2014",
+      "fruits": 66.7,
+      "vegetables": 44.6
+    },
+    {
+      "yr": "2015",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2016",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],
+  "SE":[
+    {
+      "yr": "2010",
+      "fruits": 63.3,
+      "vegetables": 65.9
+    },
+    {
+      "yr": "2011",
+      "fruits": 61.6,
+      "vegetables": 66.8
+    },
+    {
+      "yr": "2012",
+      "fruits": 61.9,
+      "vegetables": 68.9
+    },
+    {
+      "yr": "2013",
+      "fruits": 60.6,
+      "vegetables": 69.6
+    },
+    {
+      "yr": "2014",
+      "fruits": 61.1,
+      "vegetables": 66.9
+    },
+    {
+      "yr": "2015",
+      "fruits": 60.4,
+      "vegetables": 66.4
+    },
+    {
+      "yr": "2016",
+      "fruits": 58.6,
+      "vegetables": 67.5
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],
+  "GB":[
+    {
+      "yr": "2010",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2011",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2012",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2013",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2014",
+      "fruits": 62.8,
+      "vegetables": 65.5
+    },
+    {
+      "yr": "2015",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2016",
+      "fruits": ".",
+      "vegetables": "."
+    },
+    {
+      "yr": "2017",
+      "fruits": ".",
+      "vegetables": "."
+    }
+  ],
+  "EU":[
+    {
+      "yr": "2010",
+      "fruits": 53.4,
+      "vegetables": 48.3
+    },
+    {
+      "yr": "2011",
+      "fruits": 57.9,
+      "vegetables": 54.3
+    },
+    {
+      "yr": "2012",
+      "fruits": 49.3,
+      "vegetables": 49.5
+    },
+    {
+      "yr": "2013",
+      "fruits": 56.4,
+      "vegetables": 59.3
+    },
+    {
+      "yr": "2014",
+      "fruits": 53.5,
+      "vegetables": 50.3
+    },
+    {
+      "yr": "2015",
+      "fruits": 53.1,
+      "vegetables": 53
+    },
+    {
+      "yr": "2016",
+      "fruits": 48.9,
+      "vegetables": 52.18
+    },
+    {
+      "yr": "2017",
+      "fruits": 52.2,
+      "vegetables": 52.2
+    }
+  ]
+
+}

@@ -1,0 +1,171 @@
+---
+layout: frontpage
+---
+
+{% assign id = page.indicator | slugify %}
+{% assign ktore = site.data.globalne %}
+{% assign sdg_goals = ktore.sdg_goals %}
+
+{% assign slug = page.indicator | replace: '.', '-' %}
+{% assign dataset_name = 'indicator_' | append: slug %}
+
+{% assign array = "" | split: ""  %}
+{% assign precyzja = array %}
+{% assign header_csv = array %}
+{% assign filtry = array %}
+{% assign wszystkie = array %}
+{% assign jednostka = array %}
+{% assign tytul = array %}
+{% assign metadane = array %}
+
+{% assign precyzja = page.pre %}
+{% assign metadane =page %}
+{% assign tytul = page.graph_title %}
+{% assign jednostka = page.jednostka %}
+{% assign wszystkie = page.zmienne | split: ";" %}
+{% assign filtry = page.kategorie | split: "," %}
+{% assign header_csv = page.indicator_variable_1 | split: "," %}
+{% assign sdg_indicator = ktore[dataset_name] %}
+{% assign sdg_indicators = ktore.sdg_indicator_metadata %}
+
+{% assign foo = array %}
+{% for wszy in wszystkie %}
+{% assign ha = wszy | split: "," | jsonify | append:','%}
+{% assign foo = foo | push: ha %}
+{% endfor %}
+
+{% for indicators in sdg_indicators %}
+{% if indicators.indicator_id == page.indicator %}
+  {% assign this_sdg_indicator_metadata = indicators %}
+{% endif %}
+{% endfor %}
+
+{% assign indicator_title = this_sdg_indicator_metadata.indicator %}
+{% assign licznik = header_csv | size %}
+{% assign row = array %}
+{% assign labels = array %}
+
+{% assign row1 = array %}
+{%for i in (0..licznik) %}
+  {% for indicator in sdg_indicator %}
+    {% assign a = header_csv[i] %}
+    {% assign row1 = row1 | push: indicator[a] %}
+  {%endfor%}
+{%endfor%}
+
+{% for indicator in sdg_indicator %}
+  {% assign labels = labels | push: indicator.year %}
+{% endfor %}
+
+<h3 style="margin: 2em 0;">{{ page.indicator}} - {{ indicator_title }} </h3>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item"><a class="nav-link active" href="#data" aria-controls="data" role="tab" data-toggle="tab">Data</a></li>
+  <li class="nav-item"><a class="nav-link" href="#metadata" aria-controls="metadata" role="tab" data-toggle="tab">Metadata</a></li>
+</ul>
+
+<div style="float: left;width: 100%;">
+  {% assign table_template = 'components/table.html' %}
+
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="data">
+
+          <div style="display: flow-root;margin-top: 15px;">
+
+                  <div id="title" style="text-align: center"><h3>Total [hours]</h3><button id="sex"><i class="fa fa-child"></i></button></div>
+                <div id="chartdiv11"></div>
+                <table id="dataTable"></table>
+          </div>
+
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="metadata">
+      <div class="metadata-table">
+          <h2>Information about indicator</h2>
+          <table>
+            {% for indicator_metadata in site.prose.metadata._indicators %}
+              {% if indicator_metadata.field.scope == "global" %}
+                <tr>
+                  <th style="padding: 5px; height: 45px;">  {{ indicator_metadata.field.label2 }} </th>
+                  <td style="padding: 10px; text-align: justify; height: 45px;">  {{ metadane[indicator_metadata.name] }} </td>
+                </tr>
+              {% endif %}
+            {% endfor %}
+          </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+  var iconPath = "M20.4,19.3L32,24.4c-2.3,3.4-3.5,7.3-3.5,11.4c0,11.2,9.1,20.4,20.4,20.4s20.4-9.1,20.4-20.4c0-4-1.2-8-3.4-11.3l10.2-4.8   l0,19.4L73,45.7c-0.2,0.5-0.2,1,0.1,1.4s0.8,0.7,1.3,0.7h5.9c0.5,0,1-0.2,1.2-0.7c0.3-0.4,0.3-0.9,0.1-1.4l-2.7-6.6V18.4   c0-0.8-0.1-1.4-1.5-2C77.1,16.3,49.6,4.1,49.6,4.1c-0.4-0.2-0.8-0.2-1.2,0l-28,12.4c-0.5,0.2-0.9,0.8-0.9,1.4S19.8,19,20.4,19.3z    M66.2,35.8c0,9.6-7.8,17.4-17.4,17.4s-17.4-7.8-17.4-17.4c0-3.7,1.2-7.2,3.3-10.2l13.6,6.1c0.2,0.1,0.4,0.1,0.6,0.1s0.4,0,0.6-0.1   l13.4-6C65.1,28.7,66.2,32.2,66.2,35.8z M76.7,44.8l0.7-1.5l0.6,1.5H76.7z M49,7.1l24.3,10.8L49,28.7L24.7,17.9L49,7.1z"
+  var iconPath2 = "M49.4,59.8C29.9,59.8,14,75.7,14,95.2c0,0.8,0.7,1.5,1.5,1.5h67.8c0.8,0,1.5-0.7,1.5-1.5C84.8,75.7,68.9,59.8,49.4,59.8z    M17.1,93.7c0.8-17.2,15-30.9,32.4-30.9S81,76.6,81.8,93.7H17.1z"
+
+
+  var stateData =(function() {
+        var json = null;
+        $.ajax({
+            'async': false,
+            'url': "{{site.baseurl}}/json/{{page.indicator}}.json",
+            'dataType': "json",
+            'success': function (data) {
+                json = data;
+            }
+        });
+        return json;
+  })();
+
+  Chartss(stateData["total"]);
+
+  $("#sex").click(function(){
+    if ($( "#sex i" ).hasClass( "fa fa-child" )){
+        $( "#sex i" ).removeClass( "fa fa-child" ).addClass( "fa fa-mars" );
+        Chartss(stateData["male"]);
+        $("#title h3").html("Male [hours]");
+    }else if ($( "#sex i" ).hasClass( "fa fa-mars" )){
+      $( "#sex i" ).removeClass( "fa fa-mars" ).addClass( "fa fa-venus" );
+      Chartss(stateData["female"]);
+      $("#title h3").html("Female [hours]");
+    }else{
+      $( "#sex i" ).removeClass( "fa fa-venus" ).addClass( "fa fa-child" );
+      Chartss(stateData["total"]);
+      $("#title h3").html("Total [hours]");
+    }
+
+  });
+
+function Chartss(stateData) {
+  am4core.useTheme(am4themes_animated);
+  am4core.useTheme(am4themes_dataviz);
+
+  var mainContainer = am4core.create("chartdiv11", am4core.Container);
+  mainContainer.width = am4core.percent(100);
+  mainContainer.height = am4core.percent(100);
+  mainContainer.layout = "horizontal";
+
+  var chart = mainContainer.createChild(am4charts.SlicedChart);
+  chart.paddingLeft = 0;
+  chart.data = stateData;
+
+  var series = chart.series.push(new am4charts.PictorialStackedSeries());
+  series.dataFields.value = "value";
+  series.dataFields.category = "name";
+  series.alignLabels = true;
+
+  series.maskSprite.path = iconPath+iconPath2;
+  series.orientation = "horizontal";
+  series.labels.template.disabled = true;
+  series.ticks.template.disabled = true;
+  chart.legend = new am4charts.Legend();
+  chart.legend.position = "bottom";
+
+
+     $("#dataTable").html('<thead><tr><th>Nazwa</th><th>Wartość</th></tr></thead><tbody></tbody>');
+     for (item in stateData) {
+       $("#dataTable").find('tbody').append( "<tr class="+item+"><td>"+stateData[item].name+"</td><td>"+stateData[item].value+"</td></tr>" );
+     }
+}
+
+</script>

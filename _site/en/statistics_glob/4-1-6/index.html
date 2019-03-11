@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<meta charset="utf-8">
+
+				<title>Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill</title>
+				<link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+
+        
+
+				<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+				<script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+				<link rel="stylesheet" href="/assets/css/chartist.css">
+        <link rel="stylesheet" href="/assets/css/chartist-plugin-tooltip.css">
+				<link rel="stylesheet" href="/assets/css/custom.css?v=2019-03-11-00-26-47-+0100">
+				<link rel="stylesheet" href="/assets/css/custom_panel.css?v=2019-03-11-00-26-47-+0100">
+				<link rel="stylesheet" href="/assets/css/custom_contrast.css?v=2019-03-11-00-26-47-+0100">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+				<script src="/assets/js/vendor/chartist.min.js"></script>
+        <script src="/assets/js/vendor/chartist-plugin-accessibility.min.js"></script>
+        <script src="/assets/js/vendor/chartist-plugin-legend.js"></script>
+        <script src="/assets/js/vendor/chartist-plugin-axistitle.js"></script>
+        <script src="/assets/js/vendor/chartist-plugin-tooltip.min.js"></script>
+
+				<script src="/assets/js/accessibility.js"></script>
+
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+				<script src="/assets/amcharts4/core.js"></script>
+				<script src="/assets/amcharts4/maps.js"></script>
+				<script src="/assets/amcharts4/charts.js"></script>
+				<script src="/assets/amcharts4/themes/animated.js"></script>
+				<script src="/assets/amcharts4/themes/dataviz.js"></script>
+				<script src="/assets/amcharts4/geodata/worldLow.js"></script>
+
+				<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+				<script src="https://cdn.rawgit.com/jasondavies/d3-cloud/v1.2.1/build/d3.layout.cloud.js"></script>
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="/"><img src="/assets/img/logo_GUS_en.png"></a>
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" style="background-color: transparent;">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="margin-left: auto;">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/indicator">Indicators</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/game">Game</a>
+      </li>
+      <li class="nav-item kontrast" style="margin-top: 20px;">
+
+      </li>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0" action="/search/?search=">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="width: 15px;"><i class="fa fa-search"></i></button>
+    </form>
+
+  </div>
+</nav>
+
+<script>
+var switcher = new accessibilitySwitcher('');
+$(".high").attr('style',  'font-size:26px;color:#000000;');
+$(".default").attr('style',  'font-size:26px;color:#ffffff;');
+
+
+if ($("body").css("background-color")=='rgb(0, 0, 0)'){
+  $(".high").attr('style',  'display:none');
+}else{
+  $(".default").attr('style',  'display:none');
+}
+
+$(".high").click(function() {
+  $(".high").attr('style',  'display:none');
+  $(".default").attr('style',  'font-size:26px;color:#ffffff;display:block;');
+});
+
+$(".default").click(function() {
+  $(".default").attr('style',  'display:none');
+  $(".high").attr('style',  'font-size:26px;color:#000000;display:block;');
+});
+
+</script>
+
+
+<div class="front" style="padding: .5rem 1rem;display: inline-table;width: 98%;margin-top: 35px;">
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 style="margin: 2em 0;">4.1.6 - Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill </h3>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item"><a class="nav-link active" href="#data" aria-controls="data" role="tab" data-toggle="tab">Data</a></li>
+  <li class="nav-item"><a class="nav-link" href="#metadata" aria-controls="metadata" role="tab" data-toggle="tab">Metadata</a></li>
+</ul>
+
+<div style="float: left;width: 100%;">
+  
+
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="data">
+      <div style="display: flow-root;">
+        
+          
+          
+          
+          
+            <div id="filtry">.</div>
+            <div id="przycisk" style="width: 25%;float: right;"><button type="button" onclick="Zaznacz()" style="min-width: 178px;width: 80%;height: 50px;margin-bottom: 5px;float: right;">Select All</button><button type="button" onclick="Usun()" style="min-width: 178px;width: 80%;height: 50%;margin-top: 0px;float: right;">Clear All</button></div>
+            <div>
+
+
+
+
+<div id="linechart-4-1-6" class="ct-chart ct-major-eleventh"></div>
+<script>
+
+(function (){
+  var container = '#linechart-4-1-6'
+  var labels = ["2010","2011","2012","2013","2014","2015","2016","2017"]
+  var licznik=16
+  var calosc=["50.1","52.0","52.5","52.5","54.9",null,null,null,"44.1","45.5","46.6","47.3","50.2",null,null,null,"31.2","33.3","33.0","34.1","36.1",null,null,null,"32.1","33.8","35.1","34.9","38.5",null,null,null,null,"30.9","36.5","36.7","39.7",null,null,null,null,"19.4","21.7","22.1","25.2",null,null,null,null,"16.5","20.0","19.1","21.6",null,null,null,"45.8","46.8","51.1","51.5","52.9",null,null,null,"91.3","93.7","91.6","93.4","93.6",null,null,null,"83.3","85.4","83.5","85.2","87.6",null,null,null,"63.5","69.7","65.1","67.9","70.4",null,null,null,"66.2","70.4","69.1","70.7","74.8",null,null,null,null,"66.0","73.8","72.3","78.2",null,null,null,null,"44.4","46.3","45.6","52.4",null,null,null,null,"46.6","53.3","50.1","56.2",null,null,null,"84.9","84.3","86.8","86.2","84.4",null,null,null,null,null,null,null,null,null,null,null]
+  var jez= ''
+  var legen=["copying or moving a file or folder","using copy and paste tools to duplicate or move information within a document","using the basic math functions in a spreadsheet","installing new devices","transferring files between a computer and other devices","changing or checking program settings","creating electronic presentations with presentation software","sending e-mail with attachments","copying or moving a file or folder_","using copy and paste tools to duplicate or move information within a document_","using the basic math functions in a spreadsheet_","installing new devices_","transferring files between a computer and other devices_","changing or checking program settings_","creating electronic presentations with presentation software_","sending e-mails with attachements_"]
+
+  if(1=='0'){
+    var precyz=0;
+  }else{
+    var precyz=parseInt(1) || 2
+  }
+
+
+    legenda=[]
+    for (j=0;j<legen.length;j++){
+      legenda.push(legen[j].replace(/[_]/g, ''))
+    }
+
+
+var calosc_liczby =calosc.map(Number)
+var lower = Math.min.apply(Math,calosc_liczby);
+if (lower>0){
+  lower=0;
+}
+
+var b = [[]];
+seria=[]
+for (i=1;i<licznik+1;i++){
+  b[i] = calosc.splice(0,labels.length);
+  seria.push(b[i])
+}
+
+  var chartData = {
+    labels: labels,
+    series: seria
+  }
+
+  var chartOpts = {
+    showArea: true,
+    scaleMinSpace: 30,
+    low:lower,
+    width: '100%',
+    height: '100%',
+    chartPadding: {
+        left: 40
+    },
+    axisY: {
+      
+      offset: 50,
+      
+      
+      onlyInteger: false,
+      labelInterpolationFnc: function (value) {
+        // do whatever math operation you want here
+          return Chartist.roundWithPrecision(value, precyz).toFixed(precyz).toString().replace(",", ".") + '';
+
+      }
+    },
+    axisX: {
+      showGrid: false,
+      labelInterpolationFnc: function (value) {
+        return value.toString()
+      }
+    },
+    lineSmooth: Chartist.Interpolation.none({
+      fillHoles: true,
+    }),
+    plugins: [
+      Chartist.plugins.tooltip({
+        class: 'chartist-tooltip',
+        tooltipFnc: function(_, value) {
+          return Chartist.roundWithPrecision(value, precyz).toFixed(precyz).toString().replace(",", ".") + '';
+        }
+      }),
+      Chartist.plugins.ctAccessibility({
+        caption: '',
+        seriesHeader: 'year',
+        summary: '',
+        valueTransform: Chartist.noop
+      }),
+      Chartist.plugins.legend({
+          legendNames: legenda,
+          position: document.querySelector('div#Legenda')
+      }),
+      Chartist.plugins.ctAxisTitle({
+      axisX: {},
+      axisY: {
+        axisTitle: 'percent',
+        axisClass: 'ct-axis-title',
+        offset: {
+          x: 0,
+          y: 0
+        },
+        textAnchor: 'middle',
+        flipTitle: false
+      }
+    })
+    ],
+  }
+  chart = new Chartist.Line(container, chartData, chartOpts);
+
+  return chart;
+  })()
+
+
+
+
+</script>
+</div>
+            <div id="Legenda" align="center" style="pointer-events: none;"></div>
+            <div><div id="d"></div>
+<script>
+
+function Zaznacz(){
+  const listItems = document.querySelectorAll('.ct-legend li');
+  for (var index = 0, len = listItems.length; index < len; index++){
+    if (listItems[index].style.display=='none'){
+      listItems[index].style.display='inline-block'
+      listItems[index].click();
+      $("#infoToggler"+index).find('img').toggle();
+      $('#row-'+index).toggle();
+    }
+  };
+
+  const listIle = document.querySelectorAll('.panel-group');
+  for (ile=0;ile<listIle.length;ile++){
+    document.getElementById('wszystkie'+ile).src="/assets/img/pelne.png";
+  }
+}
+
+function Zaz(){
+  const listItems = document.querySelectorAll('.ct-legend li');
+  co=$(this).attr('id');
+  $('#collapse'+co+' ul #filtr').each(function(i)
+  {
+    ind=$(this)[0].value;
+    if (listItems[ind].style.display=='none'){
+      listItems[ind].style.display='inline-block'
+      listItems[ind].click();
+      $("#infoToggler"+ind).find('img').toggle();
+      $('#row-'+ind).toggle();
+    }
+  });
+  document.getElementById('wszystkie'+co).src="/assets/img/pelne.png";
+}
+
+function Usun(){
+  const listItems = document.querySelectorAll('.ct-legend li');
+      if (listItems[0].style.display=='none'){
+        listItems[0].click();
+        $("#infoToggler0").find('img').toggle();
+        numer=0;
+        $('#row-'+numer).toggle();
+      }
+      listItems[0].style.display='inline-block';
+      for (numer=1;numer<listItems.length;numer++){
+        if (listItems[numer].style.display=='inline-block'){
+        listItems[numer].style.display='none'
+        listItems[numer].click();
+        $("#infoToggler"+numer).find('img').toggle();
+        $('#row-'+numer).toggle();
+        }
+      }
+
+    const listIle = document.querySelectorAll('.panel-group');
+    for (ile=0;ile<listIle.length;ile++){
+      document.getElementById('wszystkie'+ile).src="/assets/img/puste.png";
+    }
+}
+
+$( document ).ready(function() {
+  var lista=["Persons aged 16-74","Persons aged 16-24"];
+  var lista1=[["copying or moving a file or folder","using copy and paste tools to duplicate or move information within a document","using the basic math functions in a spreadsheet","installing new devices","transferring files between a computer and other devices","changing or checking program settings","creating electronic presentations with presentation software","sending e-mail with attachments"],["copying or moving a file or folder","using copy and paste tools to duplicate or move information within a document","using the basic math functions in a spreadsheet","installing new devices","transferring files between a computer and other devices","changing or checking program settings","creating electronic presentations with presentation software","sending e-mails with attachements"],]
+  var jez=''
+  wymiar_n='Dimension - Select All'
+
+  ilosc=0;
+
+  var wymiar=0;
+
+  lista.forEach(function(el,elind) {
+
+    var Div = document.createElement('div');
+    Div.style.width = '23%';
+    Div.style.height = '100px';
+    Div.style.float = 'left';
+    Div.style.padding = '5px';
+    Div.id = 'divove'+ilosc;
+	  Div.style.minWidth = "121px";
+    Div.className = 'divovefiltry'
+    if (ilosc==0){
+      $('#filtry').after(Div);
+    }else{
+      $('#divove'+(ilosc-1)).after(Div);
+    }
+
+    var iDiv = document.createElement('div');
+    iDiv.className = 'panel-group';
+    iDiv.id = 'filtry'+ilosc;
+    iDiv.style.position='relative';
+    iDiv.style.zIndex='11';
+    iDiv.style.float = 'left';
+    iDiv.style.width = '100%';
+    Div.appendChild(iDiv);
+
+
+    var iiDiv = document.createElement('div');
+    iiDiv.className = 'panel panel-default';
+    iDiv.appendChild(iiDiv);
+
+    var iii1Div = document.createElement('div');
+    iii1Div.className = 'panel-heading';
+    iii1Div.style.marginBottom = '5px';
+    iii1Div.style.marginLeft = '1px';
+    iii1Div.style.marginRight = '1px';
+    iii1Div.style.padding = '0px';
+    iiDiv.appendChild(iii1Div);
+
+    var iii2Div = document.createElement('div');
+    iii2Div.id = 'collapse'+ilosc;
+    iii2Div.className = 'panel-collapse collapse';
+    iiDiv.appendChild(iii2Div);
+
+    var naglowek = document.createElement('h4');
+    naglowek.className = 'panel-title';
+    naglowek.style.margin = '15px';
+    iii1Div.appendChild(naglowek);
+
+    var napis = document.createElement('a');
+    $(napis).attr("data-toggle", "collapse");
+    napis.href="#collapse"+ilosc;
+    napis.style.textAlign="left";
+    napis.style.fontSize="1.6rem";
+    naglowek.appendChild(napis);
+
+    var napisek = document.createElement('h5');
+    napisek.innerHTML = el;
+	  napisek.style.wordWrap= "break-word";
+    napis.appendChild(napisek);
+
+    var imgh5 = document.createElement('i');
+    imgh5.className="fa fa-caret-down";
+    imgh5.style.float='right';
+    imgh5.style.color='#0071bc';
+    imgh5.style.fontSize='25px';
+    napisek.appendChild(imgh5);
+
+
+    var lista = document.createElement('ul');
+    lista.className = 'list-group checked-list-box';
+    iii2Div.appendChild(lista);
+
+    var element = document.createElement('li');
+    element.className='dropdown-header';
+    element.textContent = wymiar_n;
+    lista.appendChild(element);
+
+    var przycisk=document.createElement('button');
+    przycisk.style.float='right';
+    przycisk.style.margin='0';
+    przycisk.style.fontSize='0rem';
+    przycisk.style.backgroundColor='transparent';
+    przycisk.style.border= 'none';
+    przycisk.style.padding='0%';
+    przycisk.id=ilosc;
+    przycisk.onclick=Zaz;
+    element.appendChild(przycisk);
+
+    var image2 = document.createElement('img');
+    image2.src="/assets/img/puste.png";
+    image2.style.width='13px';
+    image2.style.height='13px';
+    image2.style.display = 'inline';
+    image2.className='wszystkie'+ilosc;
+    image2.id='wszystkie'+ilosc;
+    przycisk.appendChild(image2);
+
+    halo=0;
+
+    for (jak=0;jak<lista1[ilosc].length;jak++){
+            var span = document.createElement('span')
+            var element = document.createElement('li');
+            element.className = 'list-group-item';
+            element.id = 'filtr';
+            element.value = wymiar +jak;
+            element.style.cursor="pointer";
+            element.onclick=function(){
+              const listItems = document.querySelectorAll('.ct-legend li');
+              war=true
+              co=$(this).attr('value');
+              for (ktory=0;ktory<listItems.length;ktory++){
+                if (ktory!=co){
+                  war=(war && $("#row-"+ktory).is(":hidden"))
+                }
+              }
+              warunek=(war)
+
+              if(!warunek) {
+                $('#row-'+co).toggle();
+                $("#infoToggler"+co).find('img').toggle();
+            }
+
+            ile=$(this).closest( "ul" ).children('li').length
+            ke=$(this).closest( "ul" ).find('img').attr('class');
+            document.getElementById(ke).src="/assets/img/puste.png"
+
+            licznik=0;
+            ke2=$(this).closest( "ul" );
+            ke2.each(function() {
+               $(this).find('li').each(function(){
+                 var img = $(this).find('img:visible').attr('src');
+
+                 if (img=="/assets/img/pelne.png"){
+                   licznik=licznik+1;
+                 }
+               });
+            });
+            if (licznik==ile-1){
+              document.getElementById(ke).src="/assets/img/pelne.png"
+            }
+          },
+            span.style.marginLeft = "15px";
+            span.innerHTML = lista1[ilosc][jak];
+            element.appendChild(span);
+            lista.appendChild(element);
+
+            var zdjecie = document.createElement('div');
+            zdjecie.id = 'infoToggler'+(wymiar +jak);
+            zdjecie.style.float="right";
+			      zdjecie.style.marginRight="15px";
+            element.appendChild(zdjecie);
+
+            if ((jak==0) && (elind==0)){
+              var imga1 = document.createElement('img');
+              imga1.src="/assets/img/pelne.png";
+              imga1.style.width='13px';
+              imga1.style.height='13px';
+              imga1.style.display = 'inline';
+              zdjecie.appendChild(imga1);
+
+              var imga2 = document.createElement('img');
+              imga2.src="/assets/img/puste.png";
+              imga2.style.width='13px';
+              imga2.style.height='13px';
+              imga2.style.display = 'none';
+              zdjecie.appendChild(imga2);
+
+            }else{
+            var imga1 = document.createElement('img');
+            imga1.src="/assets/img/puste.png";
+            imga1.style.width='13px';
+            imga1.style.height='13px';
+            imga1.style.display = 'inline';
+            zdjecie.appendChild(imga1);
+
+            var imga2 = document.createElement('img');
+            imga2.src="/assets/img/pelne.png";
+            imga2.style.width='13px';
+            imga2.style.height='13px';
+            imga2.style.display = 'none';
+            zdjecie.appendChild(imga2);
+          }
+
+            halo=halo+1
+    }
+    ilosc=ilosc+1;
+    wymiar=wymiar+halo;
+});
+
+});
+
+</script>
+</div>
+          
+          <button type="button" id="calosc" onclick="Calosc()" style="padding: 10px;">Download All</button><button type="button" id="wybrane" onclick="Wybrane()" style="padding: 10px;">Download Selected</button>
+          <div id="content" align="center" style="overflow-x: auto; width: 100%; text-align: center; padding: 1px;"></div>
+
+<script>
+
+$( document ).ready(function() {
+  var jez=''
+  var DATA = [{"year":"2010","copying or moving a file or folder":"50.1","using copy and paste tools to duplicate or move information within a document":"44.1","using the basic math functions in a spreadsheet":"31.2","installing new devices":"32.1","transferring files between a computer and other devices":null,"changing or checking program settings":null,"creating electronic presentations with presentation software":null,"sending e-mail with attachments":"45.8","copying or moving a file or folder_":"91.3","using copy and paste tools to duplicate or move information within a document_":"83.3","using the basic math functions in a spreadsheet_":"63.5","installing new devices_":"66.2","transferring files between a computer and other devices_":null,"changing or checking program settings_":null,"creating electronic presentations with presentation software_":null,"sending e-mails with attachements_":"84.9"},{"year":"2011","copying or moving a file or folder":"52.0","using copy and paste tools to duplicate or move information within a document":"45.5","using the basic math functions in a spreadsheet":"33.3","installing new devices":"33.8","transferring files between a computer and other devices":"30.9","changing or checking program settings":"19.4","creating electronic presentations with presentation software":"16.5","sending e-mail with attachments":"46.8","copying or moving a file or folder_":"93.7","using copy and paste tools to duplicate or move information within a document_":"85.4","using the basic math functions in a spreadsheet_":"69.7","installing new devices_":"70.4","transferring files between a computer and other devices_":"66.0","changing or checking program settings_":"44.4","creating electronic presentations with presentation software_":"46.6","sending e-mails with attachements_":"84.3"},{"year":"2012","copying or moving a file or folder":"52.5","using copy and paste tools to duplicate or move information within a document":"46.6","using the basic math functions in a spreadsheet":"33.0","installing new devices":"35.1","transferring files between a computer and other devices":"36.5","changing or checking program settings":"21.7","creating electronic presentations with presentation software":"20.0","sending e-mail with attachments":"51.1","copying or moving a file or folder_":"91.6","using copy and paste tools to duplicate or move information within a document_":"83.5","using the basic math functions in a spreadsheet_":"65.1","installing new devices_":"69.1","transferring files between a computer and other devices_":"73.8","changing or checking program settings_":"46.3","creating electronic presentations with presentation software_":"53.3","sending e-mails with attachements_":"86.8"},{"year":"2013","copying or moving a file or folder":"52.5","using copy and paste tools to duplicate or move information within a document":"47.3","using the basic math functions in a spreadsheet":"34.1","installing new devices":"34.9","transferring files between a computer and other devices":"36.7","changing or checking program settings":"22.1","creating electronic presentations with presentation software":"19.1","sending e-mail with attachments":"51.5","copying or moving a file or folder_":"93.4","using copy and paste tools to duplicate or move information within a document_":"85.2","using the basic math functions in a spreadsheet_":"67.9","installing new devices_":"70.7","transferring files between a computer and other devices_":"72.3","changing or checking program settings_":"45.6","creating electronic presentations with presentation software_":"50.1","sending e-mails with attachements_":"86.2"},{"year":"2014","copying or moving a file or folder":"54.9","using copy and paste tools to duplicate or move information within a document":"50.2","using the basic math functions in a spreadsheet":"36.1","installing new devices":"38.5","transferring files between a computer and other devices":"39.7","changing or checking program settings":"25.2","creating electronic presentations with presentation software":"21.6","sending e-mail with attachments":"52.9","copying or moving a file or folder_":"93.6","using copy and paste tools to duplicate or move information within a document_":"87.6","using the basic math functions in a spreadsheet_":"70.4","installing new devices_":"74.8","transferring files between a computer and other devices_":"78.2","changing or checking program settings_":"52.4","creating electronic presentations with presentation software_":"56.2","sending e-mails with attachements_":"84.4"},{"year":"2015","copying or moving a file or folder":null,"using copy and paste tools to duplicate or move information within a document":null,"using the basic math functions in a spreadsheet":null,"installing new devices":null,"transferring files between a computer and other devices":null,"changing or checking program settings":null,"creating electronic presentations with presentation software":null,"sending e-mail with attachments":null,"copying or moving a file or folder_":null,"using copy and paste tools to duplicate or move information within a document_":null,"using the basic math functions in a spreadsheet_":null,"installing new devices_":null,"transferring files between a computer and other devices_":null,"changing or checking program settings_":null,"creating electronic presentations with presentation software_":null,"sending e-mails with attachements_":null},{"year":"2016","copying or moving a file or folder":null,"using copy and paste tools to duplicate or move information within a document":null,"using the basic math functions in a spreadsheet":null,"installing new devices":null,"transferring files between a computer and other devices":null,"changing or checking program settings":null,"creating electronic presentations with presentation software":null,"sending e-mail with attachments":null,"copying or moving a file or folder_":null,"using copy and paste tools to duplicate or move information within a document_":null,"using the basic math functions in a spreadsheet_":null,"installing new devices_":null,"transferring files between a computer and other devices_":null,"changing or checking program settings_":null,"creating electronic presentations with presentation software_":null,"sending e-mails with attachements_":null},{"year":"2017","copying or moving a file or folder":null,"using copy and paste tools to duplicate or move information within a document":null,"using the basic math functions in a spreadsheet":null,"installing new devices":null,"transferring files between a computer and other devices":null,"changing or checking program settings":null,"creating electronic presentations with presentation software":null,"sending e-mail with attachments":null,"copying or moving a file or folder_":null,"using copy and paste tools to duplicate or move information within a document_":null,"using the basic math functions in a spreadsheet_":null,"installing new devices_":null,"transferring files between a computer and other devices_":null,"changing or checking program settings_":null,"creating electronic presentations with presentation software_":null,"sending e-mails with attachements_":null}]
+  var naglowek=["copying or moving a file or folder","using copy and paste tools to duplicate or move information within a document","using the basic math functions in a spreadsheet","installing new devices","transferring files between a computer and other devices","changing or checking program settings","creating electronic presentations with presentation software","sending e-mail with attachments","copying or moving a file or folder_","using copy and paste tools to duplicate or move information within a document_","using the basic math functions in a spreadsheet_","installing new devices_","transferring files between a computer and other devices_","changing or checking program settings_","creating electronic presentations with presentation software_","sending e-mails with attachements_"]
+
+  rokk='Dimension'
+
+  function buildTable(data) {
+      var table = document.createElement("table");
+      table.className="gridtable";
+      var thead = document.createElement("thead");
+      var tbody = document.createElement("tbody");
+      var headRow = document.createElement("tr");
+
+      var th=document.createElement("th");
+      th.appendChild(document.createTextNode(rokk));
+      headRow.appendChild(th);
+
+      DATA.forEach(function(el) {
+        var th=document.createElement("th");
+        th.appendChild(document.createTextNode(el["year"]));
+        headRow.appendChild(th);
+      });
+      thead.appendChild(headRow);
+      table.appendChild(thead);
+
+
+      naglowek.forEach(function(o,index) {
+        var tr=document.createElement("tr");
+        tr.setAttribute("id", "row-"+index);
+        var td = document.createElement("td");
+        o1=o.replace(/[_]/g, '')
+        td.appendChild(document.createTextNode(o1));
+        tr.appendChild(td);
+        DATA.forEach(function(el) {
+          var td = document.createElement("td");
+          if (el[o]!=null){
+
+              el[o]=el[o].replace(",",".");
+
+          }else{
+            el[o]='•'
+          }
+          td.appendChild(document.createTextNode(el[o]));
+          td.align="center";
+          tr.appendChild(td);
+          if (index>0){
+              tr.style.display='none';
+            }
+
+
+        });
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+
+      return table;
+}
+
+  document.getElementById("content").appendChild(buildTable(DATA));
+});
+
+</script>
+
+        
+      </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="metadata">
+      <div class="metadata-table">
+          <h2>Information about indicator</h2>
+          <a class="usa-button" href="/assets/pdf/en/4-1-6.pdf">Download metadata for 4.1.6</a>
+          <table>
+            
+              
+                <tr>
+                  <th style="padding: 5px; height: 45px;">  Name of the indicator </th>
+                  <td style="padding: 10px; text-align: justify; height: 45px;">  4.1.6 Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill </td>
+                </tr>
+              
+            
+              
+                <tr>
+                  <th style="padding: 5px; height: 45px;">  Measure unit </th>
+                  <td style="padding: 10px; text-align: justify; height: 45px;">  percent [%] </td>
+                </tr>
+              
+            
+              
+                <tr>
+                  <th style="padding: 5px; height: 45px;">  Description of the indicator </th>
+                  <td style="padding: 10px; text-align: justify; height: 45px;">  Information and Communication Technologies (ICT) - technologies that process, collect and transmit information electronically.Data for the indicator comes from the Study of the use of Information and Communication Technologies in households and by individuals.The study of the use of Information and Communication Technologies in households and by individual users started in the EU in 2002, using mainly the method of direct or telephone interviews. In Poland, monitoring of the ICT usage in households in accordance with the European Union (EU) harmonized methodology was launched in 2004. Since then, the survey has been carried out annually and voluntary participation is ongoing. The study is carried out through face-to face interviews and includes households with at least one person aged 16-74 and persons of that age.Data for the years 2010-2014 refer to the percentage of people with computer skills (by level: low, medium, high) and internet skills (by level: low, medium, high). The level of computer and Internet skills was calculated on the basis of a list of activities related to using the computer or the internet, as appropriate, including: coping or moving a file or folder, using the copy and paste command to duplicate or move information within a document, using the basic math functions in a spreadsheet, compressing (packing) files using a special program, installing new devices, writing a computer program using a specialized programming language, using an internet search engine to find information, sending e-mail with attachments (e.g. documents, graphic files), participating in online chat rooms, groups or forums (e.g. on social networking sites)  dialing via the Internet, using programs to exchange movie files, music, etc., creating website. Starting in 2015, the Eurostat methodology for digital literacy indicators calculation has been changed. This methodology is no longer based on the existing list of activities, so the indicators based on it are not available since 2015. New indicators cover the percentage of people with total digital skills (by level: low, basic, above basic) and by skill type (information, communication, problem-solving, software). </td>
+                </tr>
+              
+            
+              
+                <tr>
+                  <th style="padding: 5px; height: 45px;">  Data sources </th>
+                  <td style="padding: 10px; text-align: justify; height: 45px;">  SDG </td>
+                </tr>
+              
+            
+          </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+$(window).on("load", function() {
+
+  $('body').click(function( e ){
+      try{
+        var name = e.target.className;
+        if (!(e.target.className.includes('ct-series') || e.target.classList.contains('list-group-item') || e.target.id.includes('infoToggler'))){
+          if(!(e.target.src)){
+            $('.collapse').collapse('hide');
+          }
+        }
+      }catch(e){
+        $('.collapse').collapse('hide');
+      }
+  });
+
+  $(function () {
+    $('.list-group.checked-list-box .list-group-item').each(function () {
+          var zmienna=16
+          var $widget = $(this),
+          $checkbox = $('<input type="checkbox"/>')
+          $widget.css('cursor', 'pointer')
+          $widget.append($checkbox);
+
+          $widget.on('click', function (e) {
+              $checkbox.prop('checked', !$checkbox.is(':checked'));
+              $checkbox.triggerHandler('change');
+
+              var isChecked = $checkbox.is(':checked');
+          });
+
+          $checkbox.on('change', function () {
+              var isChecked = $checkbox.is(':checked');
+
+              for (ola=0;ola<zmienna;ola++){
+                if($widget.val()===ola){
+                  $('li.ct-series-'+ola).click();
+                  if(document.querySelector('li.ct-series-'+ola).style.display=='none'){
+                    document.querySelector('li.ct-series-'+ola).style.display='inline-block'
+                  }else{
+                    if ($('.ct-legend > li:visible').length >1){
+                      document.querySelector('li.ct-series-'+ola).style.display='none'
+                    }
+                  }
+                }
+              }
+            });
+          if ($widget.data('checked') == true) {
+                  $checkbox.prop('checked', !$checkbox.is(':checked'));
+          }
+
+              var isChecked = $checkbox.is(':checked');
+    });
+  });
+});
+
+$( document ).ready(function() {
+  if ('percent [%]'==''){
+      $('.usa-button').css('display','none');
+  }
+});
+
+function Wybrane(){
+  var filename='4.1.6'
+  var html = document.querySelector(".gridtable").outerHTML;
+  var csv = [];
+	var rows = document.querySelectorAll(".gridtable tr");
+  for (var i = 0; i < rows.length; i++) {
+    var row = [], cols = rows[i].querySelectorAll("td, th");
+    for (var j = 0; j < cols.length; j++)
+        if(rows[i].style.display != 'none'){
+            row.push(cols[j].innerText);
+        }
+    if(rows[i].style.display != 'none'){
+      csv.push(row.join(","));
+    }
+  }
+  var reszta='selected';
+  download_csv(csv.join("\n"), filename+'_'+reszta+'.csv');
+}
+
+function Calosc(){
+  var filename='4.1.6'
+  var html = document.querySelector(".gridtable").outerHTML;
+  var csv = [];
+	var rows = document.querySelectorAll(".gridtable tr");
+  for (var i = 0; i < rows.length; i++) {
+    var row = [], cols = rows[i].querySelectorAll("td, th");
+      for (var j = 0; j < cols.length; j++)
+          row.push(cols[j].innerText);
+          csv.push(row.join(","));
+  }
+  download_csv(csv.join("\n"), filename+'.csv');
+}
+
+function download_csv(csv, filename) {
+    var csvFile;
+    var downloadLink;
+    csvFile = new Blob(["\ufeff",csv], {type: "text/csv;"});
+    downloadLink = document.createElement("a");
+    downloadLink.download = filename;
+    downloadLink.href = window.URL.createObjectURL(csvFile);
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+}
+</script>
+
+
+		<footer>
+
+</footer>
+
+</div>
+
+</body>
+
+</html>

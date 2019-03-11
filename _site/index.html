@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<meta charset="utf-8">
+
+				<title>Hackathon</title>
+				<link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+
+        
+
+				<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+				<script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+				<link rel="stylesheet" href="/assets/css/chartist.css">
+        <link rel="stylesheet" href="/assets/css/chartist-plugin-tooltip.css">
+				<link rel="stylesheet" href="/assets/css/custom.css?v=2019-03-11-00-26-47-+0100">
+				<link rel="stylesheet" href="/assets/css/custom_panel.css?v=2019-03-11-00-26-47-+0100">
+				<link rel="stylesheet" href="/assets/css/custom_contrast.css?v=2019-03-11-00-26-47-+0100">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+				<script src="/assets/js/vendor/chartist.min.js"></script>
+        <script src="/assets/js/vendor/chartist-plugin-accessibility.min.js"></script>
+        <script src="/assets/js/vendor/chartist-plugin-legend.js"></script>
+        <script src="/assets/js/vendor/chartist-plugin-axistitle.js"></script>
+        <script src="/assets/js/vendor/chartist-plugin-tooltip.min.js"></script>
+
+				<script src="/assets/js/accessibility.js"></script>
+
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+				<script src="/assets/amcharts4/core.js"></script>
+				<script src="/assets/amcharts4/maps.js"></script>
+				<script src="/assets/amcharts4/charts.js"></script>
+				<script src="/assets/amcharts4/themes/animated.js"></script>
+				<script src="/assets/amcharts4/themes/dataviz.js"></script>
+				<script src="/assets/amcharts4/geodata/worldLow.js"></script>
+
+				<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+				<script src="https://cdn.rawgit.com/jasondavies/d3-cloud/v1.2.1/build/d3.layout.cloud.js"></script>
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="/"><img src="/assets/img/logo_GUS_en.png"></a>
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" style="background-color: transparent;">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="margin-left: auto;">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/indicator">Indicators</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/game">Game</a>
+      </li>
+      <li class="nav-item kontrast" style="margin-top: 20px;">
+
+      </li>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0" action="/search/?search=">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="width: 15px;"><i class="fa fa-search"></i></button>
+    </form>
+
+  </div>
+</nav>
+
+<script>
+var switcher = new accessibilitySwitcher('');
+$(".high").attr('style',  'font-size:26px;color:#000000;');
+$(".default").attr('style',  'font-size:26px;color:#ffffff;');
+
+
+if ($("body").css("background-color")=='rgb(0, 0, 0)'){
+  $(".high").attr('style',  'display:none');
+}else{
+  $(".default").attr('style',  'display:none');
+}
+
+$(".high").click(function() {
+  $(".high").attr('style',  'display:none');
+  $(".default").attr('style',  'font-size:26px;color:#ffffff;display:block;');
+});
+
+$(".default").click(function() {
+  $(".default").attr('style',  'display:none');
+  $(".high").attr('style',  'font-size:26px;color:#000000;display:block;');
+});
+
+</script>
+
+
+<div class="front" style="padding: .5rem 1rem;display: inline-table;width: 98%;margin-top: 35px;">
+			<div id="particles-js" style="height: 350px;"><h1 id="mainHeader" style="position:absolute;margin-top: 75px;"></h1></div>
+
+<br>
+<br>
+<h4>Innovative production process of statistics based on Big Data methods and technology</h4>
+<div id="cloud" style="float:left;width:100%;margin-top: 55px;"><img src="/assets/img/intro_file.png" style="width:100%"></div>
+<br>
+<br>
+
+<script>
+	      $('#mainHeader').typeIt({
+          speed: 50,
+					cursor: false,
+      })
+      .tiType('The CHALLENGE')
+      .tiPause(500)
+      .tiBreak()
+      .tiBreak()
+      .tiPause(500)
+      .tiType('<h3>How can innovative solutions for data collection reduce response burden </h3>')
+			.tiType('<h3>and enrich or replace the statistical information/data provided by the time use survey?</h3>');
+
+			particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#02187d"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":4.005992965476349,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":224.33560606667555,"color":"#02187d","opacity":0.45668319806430385,"width":1.2819177489524316},"move":{"enable":true,"speed":3,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
+
+
+</script>
+
+
+		<footer>
+
+</footer>
+
+</div>
+
+</body>
+
+</html>

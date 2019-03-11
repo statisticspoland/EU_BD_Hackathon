@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<meta charset="utf-8">
+
+				<title>Average number of working and private hours of teachers per week (aspect of work life balance)</title>
+				<link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+
+        
+
+				<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+				<script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+				<link rel="stylesheet" href="/assets/css/chartist.css">
+        <link rel="stylesheet" href="/assets/css/chartist-plugin-tooltip.css">
+				<link rel="stylesheet" href="/assets/css/custom.css?v=2019-03-11-00-26-47-+0100">
+				<link rel="stylesheet" href="/assets/css/custom_panel.css?v=2019-03-11-00-26-47-+0100">
+				<link rel="stylesheet" href="/assets/css/custom_contrast.css?v=2019-03-11-00-26-47-+0100">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+				<script src="/assets/js/vendor/chartist.min.js"></script>
+        <script src="/assets/js/vendor/chartist-plugin-accessibility.min.js"></script>
+        <script src="/assets/js/vendor/chartist-plugin-legend.js"></script>
+        <script src="/assets/js/vendor/chartist-plugin-axistitle.js"></script>
+        <script src="/assets/js/vendor/chartist-plugin-tooltip.min.js"></script>
+
+				<script src="/assets/js/accessibility.js"></script>
+
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+				<script src="/assets/amcharts4/core.js"></script>
+				<script src="/assets/amcharts4/maps.js"></script>
+				<script src="/assets/amcharts4/charts.js"></script>
+				<script src="/assets/amcharts4/themes/animated.js"></script>
+				<script src="/assets/amcharts4/themes/dataviz.js"></script>
+				<script src="/assets/amcharts4/geodata/worldLow.js"></script>
+
+				<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+				<script src="https://cdn.rawgit.com/jasondavies/d3-cloud/v1.2.1/build/d3.layout.cloud.js"></script>
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="/"><img src="/assets/img/logo_GUS_en.png"></a>
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" style="background-color: transparent;">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="margin-left: auto;">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/indicator">Indicators</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/game">Game</a>
+      </li>
+      <li class="nav-item kontrast" style="margin-top: 20px;">
+
+      </li>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0" action="/search/?search=">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="width: 15px;"><i class="fa fa-search"></i></button>
+    </form>
+
+  </div>
+</nav>
+
+<script>
+var switcher = new accessibilitySwitcher('');
+$(".high").attr('style',  'font-size:26px;color:#000000;');
+$(".default").attr('style',  'font-size:26px;color:#ffffff;');
+
+
+if ($("body").css("background-color")=='rgb(0, 0, 0)'){
+  $(".high").attr('style',  'display:none');
+}else{
+  $(".default").attr('style',  'display:none');
+}
+
+$(".high").click(function() {
+  $(".high").attr('style',  'display:none');
+  $(".default").attr('style',  'font-size:26px;color:#ffffff;display:block;');
+});
+
+$(".default").click(function() {
+  $(".default").attr('style',  'display:none');
+  $(".high").attr('style',  'font-size:26px;color:#000000;display:block;');
+});
+
+</script>
+
+
+<div class="front" style="padding: .5rem 1rem;display: inline-table;width: 98%;margin-top: 35px;">
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 style="margin: 2em 0;">1.1.1 - Average number of working and private hours of teachers per week (aspect of work life balance) </h3>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item"><a class="nav-link active" href="#data" aria-controls="data" role="tab" data-toggle="tab">Data</a></li>
+  <li class="nav-item"><a class="nav-link" href="#metadata" aria-controls="metadata" role="tab" data-toggle="tab">Metadata</a></li>
+</ul>
+
+<div style="float: left;width: 100%;">
+  
+
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="data">
+
+          <div style="display: flow-root;margin-top: 15px;">
+
+                  <div id="title" style="text-align: center"><h3>Total [hours]</h3><button id="sex"><i class="fa fa-child"></i></button></div>
+                <div id="chartdiv11"></div>
+                <table id="dataTable"></table>
+          </div>
+
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="metadata">
+      <div class="metadata-table">
+          <h2>Information about indicator</h2>
+          <table>
+            
+              
+                <tr>
+                  <th style="padding: 5px; height: 45px;">  Name of the indicator </th>
+                  <td style="padding: 10px; text-align: justify; height: 45px;">  1.1.1 Average number of working and private hours of teachers per week (aspect of work life balance) </td>
+                </tr>
+              
+            
+              
+                <tr>
+                  <th style="padding: 5px; height: 45px;">  Measure unit </th>
+                  <td style="padding: 10px; text-align: justify; height: 45px;">  hour (hours) </td>
+                </tr>
+              
+            
+              
+                <tr>
+                  <th style="padding: 5px; height: 45px;">  Description of the indicator </th>
+                  <td style="padding: 10px; text-align: justify; height: 45px;">  The data shows average number of working and private hours of teachers per week (primary and secondary schools in Flanders in 2018) </td>
+                </tr>
+              
+            
+              
+                <tr>
+                  <th style="padding: 5px; height: 45px;">  Data sources </th>
+                  <td style="padding: 10px; text-align: justify; height: 45px;">  Modular Online Time Use Survey (MOTUS) </td>
+                </tr>
+              
+            
+          </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+  var iconPath = "M20.4,19.3L32,24.4c-2.3,3.4-3.5,7.3-3.5,11.4c0,11.2,9.1,20.4,20.4,20.4s20.4-9.1,20.4-20.4c0-4-1.2-8-3.4-11.3l10.2-4.8   l0,19.4L73,45.7c-0.2,0.5-0.2,1,0.1,1.4s0.8,0.7,1.3,0.7h5.9c0.5,0,1-0.2,1.2-0.7c0.3-0.4,0.3-0.9,0.1-1.4l-2.7-6.6V18.4   c0-0.8-0.1-1.4-1.5-2C77.1,16.3,49.6,4.1,49.6,4.1c-0.4-0.2-0.8-0.2-1.2,0l-28,12.4c-0.5,0.2-0.9,0.8-0.9,1.4S19.8,19,20.4,19.3z    M66.2,35.8c0,9.6-7.8,17.4-17.4,17.4s-17.4-7.8-17.4-17.4c0-3.7,1.2-7.2,3.3-10.2l13.6,6.1c0.2,0.1,0.4,0.1,0.6,0.1s0.4,0,0.6-0.1   l13.4-6C65.1,28.7,66.2,32.2,66.2,35.8z M76.7,44.8l0.7-1.5l0.6,1.5H76.7z M49,7.1l24.3,10.8L49,28.7L24.7,17.9L49,7.1z"
+  var iconPath2 = "M49.4,59.8C29.9,59.8,14,75.7,14,95.2c0,0.8,0.7,1.5,1.5,1.5h67.8c0.8,0,1.5-0.7,1.5-1.5C84.8,75.7,68.9,59.8,49.4,59.8z    M17.1,93.7c0.8-17.2,15-30.9,32.4-30.9S81,76.6,81.8,93.7H17.1z"
+
+
+  var stateData =(function() {
+        var json = null;
+        $.ajax({
+            'async': false,
+            'url': "/json/1.1.1.json",
+            'dataType': "json",
+            'success': function (data) {
+                json = data;
+            }
+        });
+        return json;
+  })();
+
+  Chartss(stateData["total"]);
+
+  $("#sex").click(function(){
+    if ($( "#sex i" ).hasClass( "fa fa-child" )){
+        $( "#sex i" ).removeClass( "fa fa-child" ).addClass( "fa fa-mars" );
+        Chartss(stateData["male"]);
+        $("#title h3").html("Male [hours]");
+    }else if ($( "#sex i" ).hasClass( "fa fa-mars" )){
+      $( "#sex i" ).removeClass( "fa fa-mars" ).addClass( "fa fa-venus" );
+      Chartss(stateData["female"]);
+      $("#title h3").html("Female [hours]");
+    }else{
+      $( "#sex i" ).removeClass( "fa fa-venus" ).addClass( "fa fa-child" );
+      Chartss(stateData["total"]);
+      $("#title h3").html("Total [hours]");
+    }
+
+  });
+
+function Chartss(stateData) {
+  am4core.useTheme(am4themes_animated);
+  am4core.useTheme(am4themes_dataviz);
+
+  var mainContainer = am4core.create("chartdiv11", am4core.Container);
+  mainContainer.width = am4core.percent(100);
+  mainContainer.height = am4core.percent(100);
+  mainContainer.layout = "horizontal";
+
+  var chart = mainContainer.createChild(am4charts.SlicedChart);
+  chart.paddingLeft = 0;
+  chart.data = stateData;
+
+  var series = chart.series.push(new am4charts.PictorialStackedSeries());
+  series.dataFields.value = "value";
+  series.dataFields.category = "name";
+  series.alignLabels = true;
+
+  series.maskSprite.path = iconPath+iconPath2;
+  series.orientation = "horizontal";
+  series.labels.template.disabled = true;
+  series.ticks.template.disabled = true;
+  chart.legend = new am4charts.Legend();
+  chart.legend.position = "bottom";
+
+
+     $("#dataTable").html('<thead><tr><th>Nazwa</th><th>Wartość</th></tr></thead><tbody></tbody>');
+     for (item in stateData) {
+       $("#dataTable").find('tbody').append( "<tr class="+item+"><td>"+stateData[item].name+"</td><td>"+stateData[item].value+"</td></tr>" );
+     }
+}
+
+</script>
+
+
+		<footer>
+
+</footer>
+
+</div>
+
+</body>
+
+</html>

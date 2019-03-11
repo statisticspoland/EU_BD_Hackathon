@@ -1,0 +1,90 @@
+{
+      "BE":[{
+          "name": "Personal Care",
+          "value": 3
+      }, {
+          "name": "Employment",
+          "value": 6
+      }, {
+          "name": "Study",
+          "value": 2
+      },{
+        "name": "Domestic",
+        "value": 3
+      }, {
+        "name": "Leisure",
+        "value": 9
+      }, {
+        "name": "Travel",
+        "value": 2
+      }, {
+        "name": "Unspecified",
+        "value": 1
+      }],
+      "FR":[{
+          "name": "Personal Care",
+          "value": 3
+      }, {
+          "name": "Employment",
+          "value": 306
+      }, {
+          "name": "Study",
+          "value": 9
+      },{
+        "name": "Domestic",
+        "value": 1
+      }, {
+        "name": "Leisure",
+        "value": 21
+      }, {
+        "name": "Travel",
+        "value": 1
+      }, {
+        "name": "Unspecified",
+        "value": 1
+      }],
+      "HU":[{
+          "name": "Personal Care",
+          "value": 2
+      }, {
+          "name": "Employment",
+          "value": 22
+      }, {
+          "name": "Study",
+          "value": 2
+      },{
+        "name": "Domestic",
+        "value": 1
+      }, {
+        "name": "Leisure",
+        "value": 2
+      }, {
+        "name": "Travel",
+        "value": 8
+      }, {
+        "name": "Unspecified",
+        "value": 0
+      }],
+      "NO":[{
+          "name": "Personal Care",
+          "value": 1
+      }, {
+          "name": "Employment",
+          "value": 1
+      }, {
+          "name": "Study",
+          "value": 1
+      },{
+        "name": "Domestic",
+        "value": 1
+      }, {
+        "name": "Leisure",
+        "value": 9
+      }, {
+        "name": "Travel",
+        "value": 1
+      }, {
+        "name": "Unspecified",
+        "value": 1
+      }]
+}

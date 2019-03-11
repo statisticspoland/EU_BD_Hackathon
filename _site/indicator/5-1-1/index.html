@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<meta charset="utf-8">
+
+				<title>Body mass index (BMI) by nationality and sex in 2014</title>
+				<link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+
+        
+
+				<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+				<script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+				<link rel="stylesheet" href="/assets/css/chartist.css">
+        <link rel="stylesheet" href="/assets/css/chartist-plugin-tooltip.css">
+				<link rel="stylesheet" href="/assets/css/custom.css?v=2019-03-11-00-26-47-+0100">
+				<link rel="stylesheet" href="/assets/css/custom_panel.css?v=2019-03-11-00-26-47-+0100">
+				<link rel="stylesheet" href="/assets/css/custom_contrast.css?v=2019-03-11-00-26-47-+0100">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+				<script src="/assets/js/vendor/chartist.min.js"></script>
+        <script src="/assets/js/vendor/chartist-plugin-accessibility.min.js"></script>
+        <script src="/assets/js/vendor/chartist-plugin-legend.js"></script>
+        <script src="/assets/js/vendor/chartist-plugin-axistitle.js"></script>
+        <script src="/assets/js/vendor/chartist-plugin-tooltip.min.js"></script>
+
+				<script src="/assets/js/accessibility.js"></script>
+
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+				<script src="/assets/amcharts4/core.js"></script>
+				<script src="/assets/amcharts4/maps.js"></script>
+				<script src="/assets/amcharts4/charts.js"></script>
+				<script src="/assets/amcharts4/themes/animated.js"></script>
+				<script src="/assets/amcharts4/themes/dataviz.js"></script>
+				<script src="/assets/amcharts4/geodata/worldLow.js"></script>
+
+				<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+				<script src="https://cdn.rawgit.com/jasondavies/d3-cloud/v1.2.1/build/d3.layout.cloud.js"></script>
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="/"><img src="/assets/img/logo_GUS_en.png"></a>
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" style="background-color: transparent;">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="margin-left: auto;">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/indicator">Indicators</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/game">Game</a>
+      </li>
+      <li class="nav-item kontrast" style="margin-top: 20px;">
+
+      </li>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0" action="/search/?search=">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="width: 15px;"><i class="fa fa-search"></i></button>
+    </form>
+
+  </div>
+</nav>
+
+<script>
+var switcher = new accessibilitySwitcher('');
+$(".high").attr('style',  'font-size:26px;color:#000000;');
+$(".default").attr('style',  'font-size:26px;color:#ffffff;');
+
+
+if ($("body").css("background-color")=='rgb(0, 0, 0)'){
+  $(".high").attr('style',  'display:none');
+}else{
+  $(".default").attr('style',  'display:none');
+}
+
+$(".high").click(function() {
+  $(".high").attr('style',  'display:none');
+  $(".default").attr('style',  'font-size:26px;color:#ffffff;display:block;');
+});
+
+$(".default").click(function() {
+  $(".default").attr('style',  'display:none');
+  $(".high").attr('style',  'font-size:26px;color:#000000;display:block;');
+});
+
+</script>
+
+
+<div class="front" style="padding: .5rem 1rem;display: inline-table;width: 98%;margin-top: 35px;">
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 style="margin: 2em 0;">5.1.1 - Body mass index (BMI) by nationality and sex in 2014 </h3>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item"><a class="nav-link active" href="#data" aria-controls="data" role="tab" data-toggle="tab">Data</a></li>
+  <li class="nav-item"><a class="nav-link" href="#metadata" aria-controls="metadata" role="tab" data-toggle="tab">Metadata</a></li>
+</ul>
+
+<div style="float: left;width: 100%;">
+  
+
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="data">
+      <div style="display: flow-root;margin-top: 15px;">
+            <div id="title" style="text-align: center"><h3>AT [persons]</h3><button id="sex"><i class="fa fa-child"></i></button></div>
+            <div id="chartdiv"></div>
+            <div id="chartdiv2"></div>
+            <table id="dataTable"></table>
+      </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="metadata">
+      <div class="metadata-table">
+          <h2>Information about indicator</h2>
+          <table>
+            
+              
+                <tr>
+                  <th style="padding: 5px; height: 45px;">  Name of the indicator </th>
+                  <td style="padding: 10px; text-align: justify; height: 45px;">  5.1.1 Body mass index (BMI) by nationality and sex in 2014 </td>
+                </tr>
+              
+            
+              
+                <tr>
+                  <th style="padding: 5px; height: 45px;">  Measure unit </th>
+                  <td style="padding: 10px; text-align: justify; height: 45px;">  persons </td>
+                </tr>
+              
+            
+              
+                <tr>
+                  <th style="padding: 5px; height: 45px;">  Description of the indicator </th>
+                  <td style="padding: 10px; text-align: justify; height: 45px;">  The data shows BMI by sex in specific countries (Poland, Germany, Austria) </td>
+                </tr>
+              
+            
+              
+                <tr>
+                  <th style="padding: 5px; height: 45px;">  Data sources </th>
+                  <td style="padding: 10px; text-align: justify; height: 45px;">  Eurostat </td>
+                </tr>
+              
+            
+          </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  var stateData_all =(function() {
+        var json = null;
+        $.ajax({
+            'async': false,
+            'url': "/json/5.1.1.json",
+            'dataType': "json",
+            'success': function (data) {
+                json = data;
+            }
+        });
+        return json;
+  })();
+
+  stateData=stateData_all['total'][0];
+  Chartss(stateData);
+
+
+  $("#sex").click(function(){
+    if ($( "#sex i" ).hasClass( "fa fa-child" )){
+        stateData=stateData_all['male'][0];
+        $( "#sex i" ).removeClass( "fa fa-child" ).addClass( "fa fa-mars" );
+        Chartss(stateData);
+    }else if ($( "#sex i" ).hasClass( "fa fa-mars" )){
+      stateData=stateData_all['female'][0];
+      $( "#sex i" ).removeClass( "fa fa-mars" ).addClass( "fa fa-venus" );
+      Chartss(stateData);
+    }else{
+      stateData=stateData_all['total'][0];
+      $( "#sex i" ).removeClass( "fa fa-venus" ).addClass( "fa fa-child" );
+      Chartss(stateData);
+    }
+
+  });
+
+
+function Chartss(stateData) {
+  am4core.useTheme(am4themes_animated);
+
+  var mainContainer = am4core.create("chartdiv", am4core.Container);
+  mainContainer.width = am4core.percent(100);
+  mainContainer.height = am4core.percent(100);
+
+  var mainContainer2 = am4core.create("chartdiv2", am4core.Container);
+  mainContainer2.width = am4core.percent(100);
+  mainContainer2.height = am4core.percent(100);
+
+  var femaleChart = mainContainer.createChild(am4charts.PieChart);
+  femaleChart.paddingLeft = '80px';
+  femaleChart.paddingRight = '70px';
+
+  femaleChart.data = stateData["AT"];
+
+  var femaleSeries = femaleChart.series.push(new am4charts.PieSeries());
+  femaleSeries.dataFields.category = "name";
+  femaleSeries.dataFields.value = "total";
+
+  femaleSeries.labels.template.text = "{category}\n{value}";
+
+
+  femaleSeries.hiddenState.properties.opacity = 1;
+  femaleSeries.hiddenState.properties.endAngle = -90;
+  femaleSeries.hiddenState.properties.startAngle = -90;
+
+
+  var mapChart = mainContainer2.createChild(am4maps.MapChart);
+  mapChart.projection = new am4maps.projections.Mercator();
+  mapChart.geodata = am4geodata_worldLow;
+  mapChart.zIndex = -1;
+  mapChart.homeZoomLevel=1;
+  mapChart.homeGeoPoint = {
+  latitude: 52,
+  longitude: 11
+  };
+  mapChart.seriesContainer.events.disableType("doublehit");
+  mapChart.chartContainer.background.events.disableType("doublehit");
+  mapChart.chartContainer.wheelable = false;
+
+  var polygonSeries = mapChart.series.push(new am4maps.MapPolygonSeries())
+  polygonSeries.useGeodata = true;
+  polygonSeries.include = ["PL","NO","BG","FR","DK","LU","GE","IT","IE","GB","GR","PT","ES","CY","MT","RO","HR","SI","HU","SK","AT","CZ","BE","LT","LV","EE","FI","SE","DE"];
+
+  var selectedStateId = "AT";
+  var selectedPolygon;
+  var selectedStateName;
+
+  var polygonTemplate = polygonSeries.mapPolygons.template;
+  polygonTemplate.togglable = true;
+
+  var hoverState = polygonTemplate.states.create("hover");
+  hoverState.properties.fill = mapChart.colors.getIndex(2);
+
+  var activeState = polygonTemplate.states.create("active");
+  activeState.properties.fill = mapChart.colors.getIndex(4);
+
+  polygonTemplate.events.on("hit", function(event) {
+    var id = event.target.dataItem.dataContext.id;
+    showState(id, event.target.dataItem.dataContext.name, event.target);
+  })
+
+  mapChart.seriesContainer.background.events.on("over", function(event) {
+    showState(selectedStateId, selectedStateName, selectedPolygon);
+  });
+
+
+  function showState(id, stateName, polygon) {
+    if(selectedStateId != id){
+      if (typeof stateData[id]!='undefined'){
+      var newData = stateData[id];
+
+      if (selectedPolygon) {
+        selectedPolygon.isActive = false;
+      }
+
+
+        femaleChart.data = newData;
+
+
+      femaleChart.invalidateRawData();
+
+      selectedStateName = stateName;
+      selectedStateId = id;
+      selectedPolygon = polygon;
+
+
+      $("#title h3").html(stateName + " [persons]");
+
+      //$("."+id+" td").css("background-color", "yellow");
+
+   }else{
+     alert('No data for this country');
+   }
+ }
+  }
+
+  $("#dataTable").html('<thead><tr><th>Country</th><th>Underweight</th><th>Normal</th><th>Overweight</th><th>Pre-obese</th><th>Obese</th></tr></thead><tbody></tbody>');
+  for (item in stateData) {
+    $("#dataTable").find('tbody').append( "<tr class="+item+"><td>"+item+"</td><td>"+stateData[item][0].total+"</td><td>"+stateData[item][1].total+"</td><td>"+stateData[item][2].total+"</td><td>"+stateData[item][3].total+"</td><td>"+stateData[item][4].total+"</td></tr>" );
+  }
+}
+
+
+
+
+
+
+
+</script>
+
+
+		<footer>
+
+</footer>
+
+</div>
+
+</body>
+
+</html>

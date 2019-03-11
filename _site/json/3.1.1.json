@@ -1,0 +1,182 @@
+{
+"male":[
+{
+  "FR": [
+      {
+      "name": "Good",
+      "total": 8982
+      },
+      {
+        "name": "Fair",
+        "total": 2898
+      },
+      {
+        "name": "Bad",
+        "total": 824
+      }
+  ],
+  "BE": [
+      {
+        "name": "Good",
+        "total": 4032
+      },
+      {
+        "name": "Fair",
+        "total": 798
+      },
+      {
+        "name": "Bad",
+        "total": 208
+      }
+  ],
+  "NO": [
+      {
+        "name": "Good",
+        "total": 2495
+      },
+      {
+        "name": "Fair",
+        "total": 821
+      },
+      {
+        "name": "Bad",
+        "total": 486
+      }
+  ],
+  "HU": [
+      {
+        "name": "Good",
+        "total": 1940
+      },
+      {
+        "name": "Fair",
+        "total": 1119
+      },
+      {
+        "name": "Bad",
+        "total": 475
+      }
+  ]
+}
+],
+"female":[
+  {
+    "FR": [
+        {
+        "name": "Good",
+        "total": 9936
+        },
+        {
+          "name": "Fair",
+          "total": 3740
+        },
+        {
+          "name": "Bad",
+          "total": 1279
+        }
+    ],
+    "BE": [
+        {
+          "name": "Good",
+          "total": 4376
+        },
+        {
+          "name": "Fair",
+          "total": 1066
+        },
+        {
+          "name": "Bad",
+          "total": 288
+        }
+    ],
+    "NO": [
+        {
+          "name": "Good",
+          "total": 2578
+        },
+        {
+          "name": "Fair",
+          "total": 910
+        },
+        {
+          "name": "Bad",
+          "total": 588
+        }
+    ],
+    "HU": [
+        {
+          "name": "Good",
+          "total": 1957
+        },
+        {
+          "name": "Fair",
+          "total": 1657
+        },
+        {
+          "name": "Bad",
+          "total": 789
+        }
+    ]
+}
+],
+"total":[
+{
+  "FR": [
+      {
+      "name": "Good",
+      "total": 9459
+      },
+      {
+        "name": "Fair",
+        "total": 3319
+      },
+      {
+        "name": "Bad",
+        "total": 1052
+      }
+  ],
+  "BE": [
+      {
+        "name": "Good",
+        "total": 4204
+      },
+      {
+        "name": "Fair",
+        "total": 932
+      },
+      {
+        "name": "Bad",
+        "total": 248
+      }
+  ],
+  "NO": [
+      {
+        "name": "Good",
+        "total": 2537
+      },
+      {
+        "name": "Fair",
+        "total": 866
+      },
+      {
+        "name": "Bad",
+        "total": 537
+      }
+  ],
+  "HU": [
+      {
+        "name": "Good",
+        "total": 1949
+      },
+      {
+        "name": "Fair",
+        "total": 1388
+      },
+      {
+        "name": "Bad",
+        "total": 632
+      }
+  ]
+}
+]
+}

@@ -1,0 +1,269 @@
+[
+
+  
+  
+
+
+
+    
+  
+  {
+    "indicator": "1.1.1",
+    "title": "Average number of working and private hours of teachers per week (aspect of work life balance)",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/1-1-1/"
+  },
+  
+  {
+    "indicator": "1.1.2.1",
+    "title": "Average number of working hours for activity of teachers per week by sex",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/1-1-2-1/"
+  },
+  
+  {
+    "indicator": "1.1.2",
+    "title": "Average number of working hours for activity of teachers per week by age",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/1-1-2/"
+  },
+  
+  {
+    "indicator": "1.1.3.1",
+    "title": "Average number of private hours for personal and free time of teachers per week by sex (primary and secondary schools in Flanders in 2018)",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/1-1-3-1/"
+  },
+  
+  {
+    "indicator": "1.1.3",
+    "title": "Average number of private hours for personal and free time of teachers per week by age",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/1-1-3/"
+  },
+  
+  {
+    "indicator": "1.1.4",
+    "title": "Total number of registrations started of teachers per day of the week by places",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/1-1-4/"
+  },
+  
+  {
+    "indicator": "2.1.1",
+    "title": "Physical activity during the day",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/2-1-1/"
+  },
+  
+  {
+    "indicator": "2.1.2",
+    "title": "Points of Interest - where do we spend time",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/2-1-2/"
+  },
+  
+  {
+    "indicator": "2.1.3",
+    "title": "Transportation mode of trips",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/2-1-3/"
+  },
+  
+  {
+    "indicator": "3.1.1",
+    "title": "Self-perceived general health by sex",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/3-1-1/"
+  },
+  
+  {
+    "indicator": "3.1.2",
+    "title": "Self-perceived general health when feeling rush",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/3-1-2/"
+  },
+  
+  {
+    "indicator": "3.1.3",
+    "title": "Feeling rushed by main activity status",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/3-1-3/"
+  },
+  
+  {
+    "indicator": "3.1.4",
+    "title": "Main activity during the day by activity status",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/3-1-4/"
+  },
+  
+  {
+    "indicator": "3.1.5",
+    "title": "Usage of computer or internet in main activity during the day",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/3-1-5/"
+  },
+  
+  {
+    "indicator": "4.1.1",
+    "title": "At -risk of poverty rate according to international poverty line",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/en/statistics_glob/4-1-1/"
+  },
+  
+  {
+    "indicator": "4.1.2",
+    "title": "At-risk of poverty rate after social transfers",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/4-1-2/"
+  },
+  
+  {
+    "indicator": "4.1.3",
+    "title": "Deaths by diseases of the circulatory system, diabetes mellitus, malignant neoplasms and chronic respiratory disease per 100 thous. population",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/4-1-3/"
+  },
+  
+  {
+    "indicator": "4.1.4",
+    "title": "Death rate due to road traffic injuries per 100 thous. population",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/en/statistics_glob/4-1-4/"
+  },
+  
+  {
+    "indicator": "4.1.5",
+    "title": "Percentage of children under 5 years of age with health subjectively evaluated as very good or good",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/en/statistics_glob/4-1-5/"
+  },
+  
+  {
+    "indicator": "4.1.6",
+    "title": "Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/en/statistics_glob/4-1-6/"
+  },
+  
+  {
+    "indicator": "4.1.7",
+    "title": "Percentage of persons with basic or above basic digital skills",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/en/statistics_glob/4-1-7/"
+  },
+  
+  {
+    "indicator": "4.1.8",
+    "title": "Proportion of individuals who own a mobile telephone",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/en/statistics_glob/4-1-8/"
+  },
+  
+  {
+    "indicator": "4.1.9",
+    "title": "Passenger and freight volumes, by mode of transport",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/en/statistics_glob/4-1-9/"
+  },
+  
+  {
+    "indicator": "4.2.1",
+    "title": "Fixed Internet broadband subscriptions per 100 inhabitants",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/en/statistics_glob/4-2-1/"
+  },
+  
+  {
+    "indicator": "4.2.2",
+    "title": "Proportion of individuals aged 16-74 using the Internet in the last 3 months",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/en/statistics_glob/4-2-2/"
+  },
+  
+  {
+    "indicator": "5.1.1",
+    "title": "Body mass index (BMI) by nationality and sex in 2014",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/5-1-1/"
+  },
+  
+  {
+    "indicator": "5.1.2",
+    "title": "Body mass index (BMI) by nationality",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/5-1-2/"
+  },
+  
+  {
+    "indicator": "5.1.3",
+    "title": "Overweight or obese population",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/5-1-3/"
+  },
+  
+  {
+    "indicator": "5.1.4",
+    "title": "Fruits and vegetables consumption in population aged 15 years old and over",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/5-1-4/"
+  },
+  
+  {
+    "indicator": "5.1.5",
+    "title": "Fat and protein supply per day",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/5-1-5/"
+  },
+  
+  {
+    "indicator": "5.1.6",
+    "title": "Mobile data position by country",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/5-1-6/"
+  },
+  
+  {
+    "indicator": "5.1.7",
+    "title": "Transboundary movements (mobile data position)",
+    "excerpt": "\n",
+    "content": "\n",
+    "url": "/indicator/5-1-7/"
+  }
+  
+
+
+
+]
