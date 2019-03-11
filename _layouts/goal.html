@@ -23,7 +23,7 @@ layout: frontpage
               {% assign indicator = indicator | where:"lang", site.defaults[0].values.lang | first %}
 
               <tr>
-                  <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}{{ lang }}{{ indicator.permalink }}">{{indicator.indicator}}</a></td>
+                  <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}{{ lang }}{{ indicator.permalink }}">{{indicator_sort}}</a></td>
                   <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}{{ lang }}{{ indicator.permalink }}">{{indicator.title}}</a></td>
                   <td style="text-align: left; padding: 10px;"><a>{{indicator.zrodlo_danych}}</a></td>
                 </tr>
