@@ -10,7 +10,7 @@ layout: frontpage
     <table class="table table-striped">
       <thead>
         <tr style="padding: 1.5rem; text-align: left; height: 45px;">
-            <th scope="col">{{site.data}}</th>
+            <th scope="col">ID</th>
             <th scope="col">Indicator title</th>
             <th scope="col">Data Source</th>
         </tr>
@@ -20,10 +20,9 @@ layout: frontpage
         {% for indicator_sort in sdg_indicators %}
 
               {% assign indicator = site.indicator | where:"indicator", indicator_sort.indicator_id %}
-              {% assign indicator = indicator | where:"lang", site.defaults[0].values.lang | first %}
-
+              
               <tr>
-                  <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}{{ lang }}{{ indicator.permalink }}">{{indicator_sort}}</a></td>
+                  <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}{{ lang }}{{ indicator.permalink }}">{{indicator.indicator}}</a></td>
                   <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}{{ lang }}{{ indicator.permalink }}">{{indicator.title}}</a></td>
                   <td style="text-align: left; padding: 10px;"><a>{{indicator.zrodlo_danych}}</a></td>
                 </tr>
