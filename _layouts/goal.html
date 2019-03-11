@@ -10,7 +10,7 @@ layout: frontpage
     <table class="table table-striped">
       <thead>
         <tr style="padding: 1.5rem; text-align: left; height: 45px;">
-            <th scope="col">ID new</th>
+            <th scope="col">ID</th>
             <th scope="col">Indicator title</th>
             <th scope="col">Data Source</th>
         </tr>
@@ -24,7 +24,7 @@ layout: frontpage
               <tr>
                   <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}/indicator/{{ident}}">{{indicator_sort.indicator_id}}</a></td>
                   <td style="text-align: left; padding: 10px;"><a href="{{ site.baseurl }}/indicator/{{ident}}">{{indicator_sort.indicator}}</a></td>
-                  <td style="text-align: left; padding: 10px;"><a>{{indicator.zrodlo_danych}}</a></td>
+                  <td style="text-align: left; padding: 10px;"><a>{{indicator_sort.zrodlo}}</a></td>
                 </tr>
 
         {% endfor %}
