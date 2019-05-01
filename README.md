@@ -17,4 +17,5 @@ Statistics Poland created an open source prototype delivering a dashboard for th
 - Paulina Małek
 - Jacek Maślankowski
 
+##
 More information - https://ec.europa.eu/eurostat/cros/EU-BD-Hackathon_en
