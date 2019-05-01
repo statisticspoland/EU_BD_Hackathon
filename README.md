@@ -18,4 +18,7 @@ Statistics Poland created an open source prototype delivering a dashboard for th
 - Jacek Maślankowski
 
 ##
+
+The project is available - https://statisticspoland.github.io/EU_BD_Hackathon/
+
 More information - https://ec.europa.eu/eurostat/cros/EU-BD-Hackathon_en
