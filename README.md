@@ -1,5 +1,9 @@
 # EU_BD_Hackathon
 
+The European Big Data Hackathon 2019 organised by the European Commission (Eurostat) :
+
+https://ec.europa.eu/eurostat/cros/EU-BD-Hackathon_en
+
 Seventeen teams from European National Statistical Institutes competed to develop a data analytics tool to address this year's challenge:
 "How can innovative solutions for data collection reduce response burden and enrich or replace the statistical information/data provided by the time use survey?"
 
